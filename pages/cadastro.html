@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpdateDonate | Página Principal</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/cabecalho.css">
+    <link rel="stylesheet" href="../assets/css/conteudo.css">
+    <link rel="stylesheet" href="../assets/css/formulario.css">
+
+    <script src="../js/scripts.js"></script>
+</head>
+<body id='body'>
+    <header class="cabecalho">
+        <div>
+            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" onclick="toggleClassHome()">
+        </div>
+        <div>
+            <img class="cabecalho_img--logo" src="../assets/img/log.png" alt="Logo 'UpdateDonate'">
+        </div>
+        <nav class="cabecalho_navegacao" id="cabNav">
+            <ul class="cabecalho_itens">
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../index.html">Home</a></li>
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../pages/login.html">Login</a></li>
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Fórum</a></li>
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Doações</a></li>
+            </ul>
+        </nav>
+        <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
+    </header>
+    <main class="conteudo_principal">
+        <h1 class="titulo_principal">Cadastre-se</h1>
+        <form class="formulario" action="">
+            <label for="usario">Usuário</label>
+            <input type="text" id="usario" required placeholder="Nome de usuário">
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" required>
+
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" id="sobrenome" required >
+            
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" required>
+
+            <label for="confSenha">Confirmar senha</label>
+            <input type="text" id="confSenha" required>
+
+        </form>
+
+        <button>Concluir</button>
+    </main>
+
+</body>
+</html>
