@@ -1,7 +1,7 @@
 const home = document.getElementById('icon-home');
 
 const toCadastro = () => {
-    window.location.href = '/pages/cadastro.html'
+    window.location.href = '../pages/cadastro.html'
 }
 
 const toggleClassHome = ()=>{
