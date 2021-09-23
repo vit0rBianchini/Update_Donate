@@ -6,7 +6,7 @@
     background-color: var(--cor-secondary);
     position: fixed;
     top: 5px;
-    width: 99vw;
+    width: calc(100vw - 25px);
     display: flex;
     border-radius: 0 50px 50px 0;
     justify-content: center;
@@ -18,11 +18,13 @@
 .cabecalho_navegacao{
     visibility: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--cor-secondary);
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.53);
     width: 0px;
+    max-width: 0px;
     height: calc(100vh - 15px);
     border-radius: 0 50px 50px 0;
     position: fixed;
@@ -38,7 +40,8 @@
     visibility: visible;
     height: calc(100vh - 15px);
     border-radius: 0 50px 50px 0;
-    width: 75vw;
+    width: 60vw;
+    max-width: 300px;
     
 
 }
@@ -61,6 +64,11 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.cabecalho_item--login{
+    order: -1;
+}
+
 .backgrand {
     visibility: hidden;
     z-index: -1;
@@ -89,4 +97,88 @@
 
 .cabecalho_img--logo {
     width: 100px;
+}
+
+.usuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: fit-content;
+
+}
+
+.usuario_img{
+    background-color: var(--cor-fundo);
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+}
+
+.usuario_link-cadastro {
+    margin: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho {
+        justify-content: space-around;
+        top: 0;
+    }
+
+    .cabecalho_navegacao{
+        visibility: visible;
+        flex-direction: row;
+        width: fit-content;
+        max-width: 500px;
+
+        height: fit-content;
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        transition: none;
+    }
+
+    .cabecalho_itens{
+        display: flex;
+        flex-direction: row;
+    }
+    .cabecalho_item--login{
+        order: 1;
+    }
+
+    .cabecalho_div{
+        display: none;
+    }
+    .cabecalho_img--icon{
+        position: none;
+        top: 0;
+    }
+
+    .cabecalho_img--icon {
+        display: none;
+    }
+
+    .backgrand-ativo{
+        background-color: rgba(0, 0, 0, 0.0);
+        visibility: hidden;
+    }
+
+    .usuario{
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
+        height: fit-content;
+        
+    
+    }
+
+    .usuario_img{
+        width: 40px;
+        height: 40px;
+    }
 }

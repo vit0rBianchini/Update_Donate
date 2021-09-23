@@ -14,16 +14,20 @@
 </head>
 <body id='body'>
     <header class="cabecalho">
-        <div>
+        <div class="cabecalho_div">
             <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" onclick="toggleClassHome()">
         </div>
         <div>
             <img class="cabecalho_img--logo" src="../assets/img/log.png" alt="Logo 'UpdateDonate'">
         </div>
         <nav class="cabecalho_navegacao" id="cabNav">
+            <div class="usuario">
+                <div class="usuario_img"></div>
+                <a href="#" class="usuario_link-cadastro">Cadastre-se</a>
+            </div>
             <ul class="cabecalho_itens">
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../index.html">Home</a></li>
-                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../pages/login.html">Login</a></li>
+                <li class="cabecalho_item--login"><a class="cabecalho_item" onclick="toggleClassHome()" href="../pages/login.html">Login</a></li>
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Fórum</a></li>
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Doações</a></li>
             </ul>
