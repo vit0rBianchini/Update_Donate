@@ -23,11 +23,11 @@
         <nav class="cabecalho_navegacao" id="cabNav">
             <div class="usuario">
                 <div class="usuario_img"></div>
-                <a href="#" class="usuario_link-cadastro">Cadastre-se</a>
+                <a onclick="toCadastro()" class="usuario_link-cadastro">Cadastre-se</a>
             </div>
             <ul class="cabecalho_itens">
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../index.html">Home</a></li>
-                <li class="cabecalho_item--login"><a class="cabecalho_item" onclick="toggleClassHome()" href="../pages/login.html">Login</a></li>
+                <li class="cabecalho_item--login"><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Login</a></li>
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Fórum</a></li>
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Doações</a></li>
             </ul>
@@ -35,29 +35,20 @@
         <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
     </header>
     <main class="conteudo_principal">
-        <h1 class="titulo_principal">Cadastre-se</h1>
+        <h1 class="titulo_principal">Entre com seu login:</h1>
+
         <form class="formulario" action="">
             <label for="usario">Usuário</label>
-            <input type="text" id="usario" required placeholder="Nome de usuário">
-
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" required>
-
-            <label for="sobrenome">Sobrenome</label>
-            <input type="text" id="sobrenome" required >
-            
-            <label for="cpf">CPF</label>
-            <input type="text" id="cpf" required>
+            <input type="text" id="usario" required>
 
             <label for="senha">Senha</label>
             <input type="password" id="senha" required>
 
-            <label for="confSenha">Confirmar senha</label>
-            <input type="password" id="confSenha" required>
-
         </form>
+        <button>Entrar</button>
+        <h3 class="titulo_login">Já possui uma conta?</h3>
+        <button onclick="toCadastro()">Cadastre-se</button>
 
-        <button>Concluir</button>
     </main>
 
 </body>
