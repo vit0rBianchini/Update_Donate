@@ -1,0 +1,136 @@
+.forum_discussoes{
+    margin: 10px;
+}
+
+.forum_btn{
+    width: 183px;
+    font-size: 16px;
+    background-color: var(--cor-secondary);
+    color: black;
+    box-shadow: none;
+    border: solid black 1px;
+    margin: 10px;
+    text-transform: none;
+}
+
+.forum_select{
+    width: 183px;
+    font-size: 16px;
+    background-color: var(--cor-secondary);
+    color: black;
+    box-shadow: none;
+    border-radius: 50px;
+    border: solid black 1px;
+    margin: 10px;
+    height: 35px;
+    padding: 0 0px 0 10px;
+    outline: none;
+}
+
+.forum_card{
+    width: 80vw;
+    max-width: 340px;
+    background-color: var(--cor-secondary);
+    border-radius: 25px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.forum_conteudo-texto {
+    padding: 30px 0px 0 0px;
+    width: 60%;
+}
+
+.forum_texto-parteDois{
+    display: flex;
+}
+
+.forum_texto-titulo {
+    margin: 0 0 8px 0;
+    font-size: 17px;
+}
+
+.forum_texto-categoria{
+    background-color: #C4C4C4;
+    width: fit-content;
+    padding: 2px 12px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0 0 8px 0;
+}
+
+.forum_texto-dia{
+    margin: 0;
+}
+
+.forum_texto-resposta, .forum_texto-quantidade {
+    margin-top: 4px;
+    margin-bottom: 30px;
+
+} 
+
+.forum_texto-quantidade {
+    margin: 4px 5px 30px 5px;
+}
+
+
+.forum_conteudo-usuario{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.forum_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: black;
+}
+
+.forum_usuario{
+    margin-top: 3px;
+}
+
+@media screen and (min-width: 768px) {
+    .forum_card{
+        max-width: 470px;
+    }
+    .forum_conteudo-texto{
+        display: flex;
+        padding: 30px 0 30px 0;
+    }
+
+    .forum_texto-parteDois{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+    }
+
+    .forum_texto-resposta{
+        font-size: 16px;
+        margin: 0 0 12px 0;
+    }
+
+    .forum_texto-quantidade{
+        font-size: 20px;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .forum_discussoes{
+        display: grid;
+        grid-template-columns: 500px 500px;
+    }
+
+    .forum_discussao{
+        margin: 0 auto;
+    }
+
+}
