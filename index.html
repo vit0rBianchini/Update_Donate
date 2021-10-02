@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
 
     <script src="js/scripts.js"></script>
 </head>
+
 <body id='body'>
     <header class="cabecalho">
         <div class="cabecalho_div">
@@ -26,7 +28,8 @@
             </div>
             <ul class="cabecalho_itens">
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Home</a></li>
-                <li class="cabecalho_item--login"><a class="cabecalho_item" onclick="toggleClassHome()" href="pages/login.html">Login</a></li>
+                <li class="cabecalho_item--login"><a class="cabecalho_item" onclick="toggleClassHome()"
+                        href="pages/login.html">Login</a></li>
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Fórum</a></li>
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Doações</a></li>
             </ul>
@@ -34,12 +37,40 @@
         <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
     </header>
     <main class="conteudo_principal">
-        <h1 class="titulo_principal">Seja bem vindo ao UpdateDonate</h1>
-        <a href="pages/login.html">Login</a>
-        <a href="pages/cadastro.html">Cadastro</a>
-    
+        <img class="update_donate-art"></img>
+        <h1 class="titulo_principal">Transforme o seu computador antigo em uma causa social!</h1>
+        <!-- <a href="pages/login.html">Login</a>
+            <a href="pages/cadastro.html">Cadastro</a>
+            -->
+        <h2 class="titulo_secundario">
+            Doe peças que não usa para pessoas que precisam
+        </h2>
+        <a href="#" class="btn_saiba-mais">
+            SAIBA MAIS!
+        </a>
+        <div id="itens-bar">
+
+        </div>
+
     </main>
-    <h1>Update Donate</h1>
-    
+    <footer class="footer">
+        <div class="footer-icon">
+            <img class="cabecalho_img--logo" src="assets/img/log.png" alt="Logo 'UpdateDonate'">
+        </div>
+
+        <p class="footer-label">
+            Update Donate é uma rede de conexão entre doadores e donatários de todo o
+            país fornecendo uma estrutura sólida para doação de peças de informática.
+        </p>
+
+        <p class="footer-label">
+            2021 - Vozes da Trovoada - Todos os direitos reservados
+        </p>
+        <div class="footer-links">
+            <a class="priv-link">Privacidade</a>
+            <a class="priv-link">Termos de uso</a>
+        </div>
+    </footer>
 </body>
+
 </html>
