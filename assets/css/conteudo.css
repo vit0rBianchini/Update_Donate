@@ -4,6 +4,7 @@ Por exemplo: tags que se repetem muito ficam aqui ou contudo que aplica no site 
 
 body{
     background-color: var(--cor-fundo);
+    font-family: 'Noto Sans Display', sans-serif;
 }
 
 .body-ativo{
@@ -11,7 +12,7 @@ body{
 }
 
 :root{
-    --cor-fundo: #CFCFCF;
+    --cor-fundo: #aaaaaa;
     --cor-primary: #2B137A ;
     --cor-secondary: #E9E9E9;
 }

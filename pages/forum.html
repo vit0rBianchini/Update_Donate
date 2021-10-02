@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UpdateDonate | Página Principal</title>
+    <title>UpdateDonate | Fórum</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/cabecalho.css">
     <link rel="stylesheet" href="../assets/css/conteudo.css">
     <link rel="stylesheet" href="../assets/css/formulario.css">
     <link rel="stylesheet" href="../assets/css/forum.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script src="../js/scripts.js"></script>
 </head>
@@ -23,8 +27,8 @@
         </div>
         <nav class="cabecalho_navegacao" id="cabNav">
             <div class="usuario">
-                <div class="usuario_img"></div>
-                <a href="#" class="usuario_link-cadastro">Cadastre-se</a>
+                <div class="usuario_img"><img class="usuario_img-padrao" src="../assets/img/Prancheta 1.png" alt=""></div>
+                <a href="../pages/cadastro.html" onclick="toggleClassHome()" class="usuario_link-cadastro">Cadastre-se</a>
             </div>
             <ul class="cabecalho_itens">
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../index.html">Home</a></li>
@@ -38,6 +42,7 @@
     <main class="conteudo_principal">
         <h1 class="titulo_princiapal">Fórum</h1>
         <button class="forum_btn">Minhas discussões</button>
+        <button class="forum_btn">Minhas respostas</button>
         <select name="" id="" class="forum_select">
             <option value="">Todas as categorias</option>
             <option value="">Software</option>
@@ -126,8 +131,46 @@
                 <a class="forum_card" href="">
                 <div class="forum_conteudo-texto">
                     <div class="forum_texto-parteUm">
-                        <h2 class="forum_texto-titulo">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h2>
+                        <h2 class="forum_texto-titulo">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h2>
                         <div class="forum_texto-categoria">Hardware</div>
+                        <h5 class="forum_texto-dia">Atualizado à 2 min.</h5>
+                    </div>
+                    <div class="forum_texto-parteDois">
+                        <h5 class="forum_texto-resposta">Respostas:</h5>
+                        <h5 class="forum_texto-quantidade">2</h5>
+                    </div>
+                </div>
+                <div class="forum_conteudo-usuario">
+                    <div class="forum_img"></div>
+                    <h3 class="forum_usuario">Usuário</h3>
+                </div>
+                </a>
+            </article>
+            <article class="forum_discussao" >
+                <a class="forum_card" href="../pages/discussao.html">
+                <div class="forum_conteudo-texto">
+                    <div class="forum_texto-parteUm">
+                        <h2 class="forum_texto-titulo">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h2>
+                        <div class="forum_texto-categoria">Software</div>
+                        <h5 class="forum_texto-dia">Atualizado à 2 min.</h5>
+                    </div>
+                    <div class="forum_texto-parteDois">
+                        <h5 class="forum_texto-resposta">Respostas:</h5>
+                        <h5 class="forum_texto-quantidade">2</h5>
+                    </div>
+                </div>
+                <div class="forum_conteudo-usuario">
+                    <div class="forum_img"></div>
+                    <h3 class="forum_usuario">Usuário</h3>
+                </div>
+                </a>
+            </article>
+            <article class="forum_discussao" >
+                <a class="forum_card" href="../pages/discussao.html">
+                <div class="forum_conteudo-texto">
+                    <div class="forum_texto-parteUm">
+                        <h2 class="forum_texto-titulo">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h2>
+                        <div class="forum_texto-categoria">Software</div>
                         <h5 class="forum_texto-dia">Atualizado à 2 min.</h5>
                     </div>
                     <div class="forum_texto-parteDois">

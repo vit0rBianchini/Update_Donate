@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/cabecalho.css">
     <link rel="stylesheet" href="../assets/css/conteudo.css">
     <link rel="stylesheet" href="../assets/css/formulario.css">
-    <link rel="stylesheet" href="../assets/css/forum.css">
+    <link rel="stylesheet" href="../assets/css/discussao.css">
 
     <script src="../js/scripts.js"></script>
 </head>
@@ -29,11 +29,75 @@
             <ul class="cabecalho_itens">
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../index.html">Home</a></li>
                 <li class="cabecalho_item--login"><a class="cabecalho_item" onclick="toggleClassHome()" href="../pages/login.html">Login</a></li>
-                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Fórum</a></li>
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../pages/forum.html">Fórum</a></li>
                 <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Doações</a></li>
             </ul>
         </nav>
         <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
     </header>
+    <main class="conteudo_principal">
+        <div class="discussao_usuario-principal">
+            <div class="discussao_usuario-fundo">
+                <img src="../assets/img/Prancheta 1.png" alt="" class="discussao_usuario-img">
+            </div>
+            <h3>Usuário</h3>
+        </div>
+        <div class="discussao_conteudo-principal">
+            <h2 class="discussao_titulo">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h2>
+            <div class="discussao_informacao">
+                <div class="discussao_texto-categoria">Software</div>
+                <h5 class="discussao_texto-dia">Data de publicação<h5 class="discussao_data">dd/mm/yyyy</h5></h5>
+            </div>
+            <div class="discussao_quantidade-respostas">
+                <h5 class="discussao_quantidade-texto">Respostas:<h5 class="discussao_quantidade-texto">2</h5></h5>
+            </div>
+            <p class="discussao_texto-princiapl">
+                Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
+            </p>
+        </div>
+
+        <div class="discussao_comentario">
+            <div class=" discussao_conteudo-usuario">
+                <div class="discussao_conteudo-img-fundo">
+                    <img class="discussao_conteudo-img" src="../assets/img/Prancheta 1.png" alt="">
+                </div>
+                <div class="discussao_conteudo-info">
+                    <div class="discussao_conteudo-autor">
+                        <h4 class="discussao_conteudo-nome">Por<h4 class="discussao_conteudo-nome">Usuário</h4></h4>
+                    </div>
+                    <div class="discussao_conteudo-data">
+                        <h5 class="discussao_conteudo-data-texto">Data de publicação <h5 class="discussao_conteudo-data-texto">dd/mm/yyyy</h5></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="discussao_conteudo-cometario">
+                <p class="discussao_conteudo-texto">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </p>
+            </div>
+        </div>
+
+        <div class="discussao_comentario">
+            <div class=" discussao_conteudo-usuario">
+                <div class="discussao_conteudo-img-fundo">
+                    <img class="discussao_conteudo-img" src="../assets/img/Prancheta 1.png" alt="">
+                </div>
+                <div class="discussao_conteudo-info">
+                    <div class="discussao_conteudo-autor">
+                        <h4 class="discussao_conteudo-nome">Por<h4 class="discussao_conteudo-nome">Usuário</h4></h4>
+                    </div>
+                    <div class="discussao_conteudo-data">
+                        <h5 class="discussao_conteudo-data-texto">Data de publicação <h5 class="discussao_conteudo-data-texto">dd/mm/yyyy</h5></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="discussao_conteudo-cometario">
+                <p class="discussao_conteudo-texto">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </p>
+            </div>
+        </div>
+        <div class="discussao_adicionar-comentario">
+            <button class="discussao_btn">Adicionar à discussão</button>
+        </div>
+        
+
+    </main>
 </body>
 </html>
