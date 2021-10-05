@@ -13,6 +13,10 @@
     text-transform: none;
 }
 
+.forum_btn:hover{
+    background-color: #d8dde7;
+}
+
 .forum_select{
     width: 183px;
     font-size: 16px;
