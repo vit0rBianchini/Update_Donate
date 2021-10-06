@@ -12,3 +12,10 @@ const toggleClassHome = ()=>{
     const body = document.getElementById('body');
     body.classList.toggle('body-ativo')
 }
+
+const lookAlert = () =>{
+    const alerta = document.getElementById('alerta');
+    alerta.classList.toggle('alerta_backgrand-ativo');
+    const body = document.getElementById('body');
+    body.classList.toggle('body-ativo')
+}
