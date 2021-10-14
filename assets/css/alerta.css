@@ -1,5 +1,6 @@
 .alerta_backgrand{
     visibility: hidden;
+    z-index: 101;
 }
 
 .alerta_backgrand-ativo{

@@ -1,9 +1,3 @@
-:root{
-    --cor-fundo: #CFCFCF;
-    --cor-primary: #2B137A ;
-    --cor-secondary: #E9E9E9;
-}
-
 .conteudo_principal {
     margin-top: 80px;
     display: flex;

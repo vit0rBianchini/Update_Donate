@@ -8,7 +8,6 @@
 
 .discussao_usuario-fundo, .discussao_conteudo-img-fundo {
     margin-top: 30px;
-    background-color: whitesmoke;
     border-radius: 50px;
     display: flex;
     flex-direction: column;

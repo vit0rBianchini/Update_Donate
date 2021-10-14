@@ -13,6 +13,8 @@
     align-items: center;
     height: 77px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.53);
+    border: 1px solid black;
+    z-index: 100;
 }
 
 .cabecalho_navegacao{
@@ -22,6 +24,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--cor-secondary);
+    border: 1px solid black;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.53);
     width: 0px;
     max-width: 0px;
@@ -141,7 +144,7 @@
         flex-direction: row;
         width: auto;
         max-width: 500px;
-
+        border: none;
         height: auto;
         position: static;
         box-shadow: none;
