@@ -2,6 +2,9 @@
 Por exemplo: tags que se repetem muito ficam aqui ou contudo que aplica no site inteiro
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@500;700&family=Roboto:wght@700&display=swap');
+
+
 body{
     background-color: var(--cor-fundo);
 }
@@ -23,7 +26,80 @@ body{
     align-items: center;
 }
 
-.titulo_principal {
+
+.update_donate-art {
     margin-top: 30px;
-    font-size: larger;
+    background-color: #929cb5;
+    width: 280px;
+    height:217px;
+    border-radius: 50%;
+}
+
+.titulo_principal {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;
+    color: #353554;
+    margin-bottom: 20px;
+}
+.titulo_secundario {
+    padding: 0 4px 0 4px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.btn_saiba-mais {
+    display: flex;
+    width: 153px;
+    height: 40px;
+    border-radius: 18px;
+    background-color: #2B137A;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+#itens-bar {
+    margin-top: 200px;
+    width: 325px;
+    height: 275px;
+    background-color: #FFFFFF;
+}
+
+.footer {
+    background-color: #E9E9E9;
+    margin-top: 30px;;
+    padding: 10px;
+}
+.footer-icon {
+    margin: 10px 0 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-label {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.priv-link {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+}
+@media screen and (min-width: 1024px){
+
+
+    
 }
