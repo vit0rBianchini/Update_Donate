@@ -7,9 +7,27 @@ Por exemplo: tags que se repetem muito ficam aqui ou contudo que aplica no site 
 
 body{
     background-color: var(--cor-fundo);
+    font-family: 'Noto Sans Display', sans-serif;
 }
 
 .body-ativo{
     overflow: hidden;
 }
 
+:root{
+    --cor-fundo: #aaaaaa;
+    --cor-primary: #2B137A ;
+    --cor-secondary: #E9E9E9;
+}
+
+.conteudo_principal {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo_principal {
+    margin-top: 30px;
+    font-size: larger;
+}

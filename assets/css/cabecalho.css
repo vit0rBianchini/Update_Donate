@@ -6,7 +6,7 @@
     background-color: var(--cor-secondary);
     position: fixed;
     top: 5px;
-    width: calc(100vw - 25px);
+    width: calc(100vw - 5px);
     display: flex;
     border-radius: 0 50px 50px 0;
     justify-content: center;
@@ -111,8 +111,15 @@
 .usuario_img{
     background-color: var(--cor-fundo);
     border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 60px;
     height: 60px;
+}
+
+.usuario_img-padrao{
+    width: calc(100% - 10px);
 }
 
 .usuario_link-cadastro {
@@ -124,6 +131,7 @@
 
 @media screen and (min-width: 1024px) {
     .cabecalho {
+        width: calc(100vw - 21px);
         justify-content: space-around;
         top: 0;
     }
@@ -178,7 +186,9 @@
     }
 
     .usuario_img{
+
         width: 40px;
         height: 40px;
     }
+
 }
