@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpdateDonate | Chat - Usuário</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/cabecalho.css">
+    <link rel="stylesheet" href="../assets/css/conteudo.css">
+    <link rel="stylesheet" href="../assets/css/formulario.css">
+    <link rel="stylesheet" href="../assets/css/chat.css">
+
+    <script src="../js/scripts.js"></script>
+</head>
+<body id='body' class="body_chat">
+    <header class="cabecalho">
+        <div class="cabecalho_div">
+            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" onclick="toggleClassHome()">
+        </div>
+        <div>
+            <img class="cabecalho_img--logo" src="../assets/img/log.png" alt="Logo 'UpdateDonate'">
+        </div>
+        <nav class="cabecalho_navegacao" id="cabNav">
+            <div class="usuario">
+                <div class="usuario_img"></div>
+                <a href="#" class="usuario_link-cadastro">Cadastre-se</a>
+            </div>
+            <ul class="cabecalho_itens">
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../index.html">Home</a></li>
+                <li class="cabecalho_item--login"><a class="cabecalho_item" onclick="toggleClassHome()" href="../pages/login.html">Login</a></li>
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Fórum</a></li>
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Doações</a></li>
+            </ul>
+        </nav>
+        <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
+    </header>
+    <main>
+        <div class="chat">
+            <div class="chat_usuario">
+                <div class="chat_usuario-img"><img src="" alt=""></div>
+                <h3 class="chat_usuario-txt">Usuário</h3>
+            </div>
+
+            <div class="chat_mensagens">
+                <div class="mensagem chat_campo-mensagem-remetente"><p class="chat_campo-mensagem-texto">Primeiro</p></div>
+                <div class="mensagem chat_campo-mensagem-remetente"><p class="chat_campo-mensagem-texto">Primeiro</p></div>
+                <div class="mensagem chat_campo-mensagem-remetente"><p class="chat_campo-mensagem-texto">Primeiro</p></div>
+                <div class="mensagem chat_campo-mensagem-remetente"><p class="chat_campo-mensagem-texto">Primeiro</p></div>
+                <div class="mensagem chat_campo-mensagem-destinatario"><p class="chat_campo-mensagem-texto">Ok!</p></div>
+                <div class="mensagem chat_campo-mensagem-remetente"><p class="chat_campo-mensagem-texto">Primeiro</p></div>
+                <div class="mensagem chat_campo-mensagem-destinatario"><p class="chat_campo-mensagem-texto">Primeiro Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis harum impedit autem, nostrum quia odit pariatur iusto, officiis magnam explicabo delectus excepturi corrupti velit est quis optio corporis! Culpa, nemo!</p></div>
+                <div id="last" class="mensagem chat_campo-mensagem-remetente"><p class="chat_campo-mensagem-texto">Primeiro</p></div>
+                
+            </div>
+
+            <div class="chat_campo-texto">
+                <input type="text">
+                <div class="chat_enviar"><img src="" alt=""></div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

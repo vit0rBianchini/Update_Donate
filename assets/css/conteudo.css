@@ -20,6 +20,20 @@ body{
     --cor-secondary: #E9E9E9;
 }
 
+::-webkit-scrollbar {
+    width: 5px;            /* width of the entire scrollbar */
+}
+  
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.20);     /* color of the tracking area */
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: rgba(70, 70, 70, 0.7);    
+    border-radius: 2px;
+    width: 3px;       
+}
+
 .conteudo_principal {
     margin-top: 80px;
     display: flex;
@@ -30,4 +44,10 @@ body{
 .titulo_principal {
     margin-top: 30px;
     font-size: larger;
+}
+
+@media screen and (min-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 10px;            /* width of the entire scrollbar */
+    }
 }
