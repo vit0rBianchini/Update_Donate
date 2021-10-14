@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpdateDonate | Fórum</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/cabecalho.css">
+    <link rel="stylesheet" href="../assets/css/conteudo.css">
+    <link rel="stylesheet" href="../assets/css/formulario.css">
+    <link rel="stylesheet" href="../assets/css/doacoes.css">
+    <link rel="stylesheet" href="../assets/css/alerta.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script src="../js/scripts.js"></script>
+</head>
+<body id='body'>
+    <header class="cabecalho">
+        <div class="cabecalho_div">
+            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" onclick="toggleClassHome()">
+        </div>
+        <div>
+            <img class="cabecalho_img--logo" src="../assets/img/log.png" alt="Logo 'UpdateDonate'">
+        </div>
+        <nav class="cabecalho_navegacao" id="cabNav">
+            <div class="usuario">
+                <div class="usuario_img"></div>
+                <a href="../pages/cadastro.html" onclick="toggleClassHome()" class="usuario_link-cadastro">Cadastre-se</a>
+            </div>
+            <ul class="cabecalho_itens">
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../index.html">Home</a></li>
+                <li class="cabecalho_item--login"><a class="cabecalho_item" onclick="toggleClassHome()" href="../pages/login.html">Login</a></li>
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../pages/forum.html">Fórum</a></li>
+                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Doações</a></li>
+            </ul>
+        </nav>
+        <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
+    </header>
+    <main class="conteudo_principal">
+        <h1>Doações</h1>
+        <input class="doacao_input" type="text" placeholder="Pesquisar componente">
+        <div class="componentes">
+            <article class="componente">
+                <div class="componente_conteudo">
+                    <div class="componente_conteudo-usuario">
+                        <div class="componente_usuario">
+                            <img class="componente_usuario-img" src="../assets/img/usuarioPadrao.png" alt="">
+                            <h3 class="componente_usuario-nome">Usuário</h3>
+                        </div>
+                        <h3 class="componente_texto">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h3>
+                        <div class="componente_conteudo-data">
+                            <h5 class="componente_data">Data de publicação</h5><h5 class="componente_data-dia">dd/mm/yyyy</h5>
+                        </div>
+                    </div>
+                    <div class="componente_conteudo-img">
+                        <img class="componente_img" src="http://s.glbimg.com/po/tt/f/original/2012/01/30/hd.jpg" alt="">
+                    </div>
+                </div>
+                <button class="doacaoes_btn" onclick="lookAlert()">Demonstrar interesse</button>
+            </article>
+
+            <article class="componente">
+                <div class="componente_conteudo">
+                    <div class="componente_conteudo-usuario">
+                        <div class="componente_usuario">
+                            <img class="componente_usuario-img" src="../assets/img/usuarioPadrao.png" alt="">
+                            <h3 class="componente_usuario-nome">Usuário</h3>
+                        </div>
+                        <h3 class="componente_texto">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h3>
+                        <div class="componente_conteudo-data">
+                            <h5 class="componente_data">Data de publicação</h5><h5 class="componente_data-dia">dd/mm/yyyy</h5>
+                        </div>
+                    </div>
+                    <div class="componente_conteudo-img">
+                        <img class="componente_img" src="http://s.glbimg.com/po/tt/f/original/2012/01/30/hd.jpg" alt="">
+                    </div>
+                </div>
+                <button class="doacaoes_btn" onclick="lookAlert()">Demonstrar interesse</button>
+            </article>
+
+            <article class="componente">
+                <div class="componente_conteudo">
+                    <div class="componente_conteudo-usuario">
+                        <div class="componente_usuario">
+                            <img class="componente_usuario-img" src="../assets/img/usuarioPadrao.png" alt="">
+                            <h3 class="componente_usuario-nome">Usuário</h3>
+                        </div>
+                        <h3 class="componente_texto">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h3>
+                        <div class="componente_conteudo-data">
+                            <h5 class="componente_data">Data de publicação</h5><h5 class="componente_data-dia">dd/mm/yyyy</h5>
+                        </div>
+                    </div>
+                    <div class="componente_conteudo-img">
+                        <img class="componente_img" src="http://s.glbimg.com/po/tt/f/original/2012/01/30/hd.jpg" alt="">
+                    </div>
+                </div>
+                <button class="doacaoes_btn" onclick="lookAlert()">Demonstrar interesse</button>
+            </article>
+
+            <article class="componente">
+                <div class="componente_conteudo">
+                    <div class="componente_conteudo-usuario">
+                        <div class="componente_usuario">
+                            <img class="componente_usuario-img" src="../assets/img/usuarioPadrao.png" alt="">
+                            <h3 class="componente_usuario-nome">Usuário</h3>
+                        </div>
+                        <h3 class="componente_texto">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h3>
+                        <div class="componente_conteudo-data">
+                            <h5 class="componente_data">Data de publicação</h5><h5 class="componente_data-dia">dd/mm/yyyy</h5>
+                        </div>
+                    </div>
+                    <div class="componente_conteudo-img">
+                        <img class="componente_img" src="http://s.glbimg.com/po/tt/f/original/2012/01/30/hd.jpg" alt="">
+                    </div>
+                </div>
+                <button class="doacaoes_btn" onclick="lookAlert()">Demonstrar interesse</button>
+            </article>
+
+        </div>
+    </main>
+    <div class="alerta_backgrand " id="alerta" onclick="lookAlert()">
+        <div class="alerta_conteudo">
+            <h3 class="alerta_texto">Para você demonstrar interesse no item, necessita-se que realize o login ou cadastro </h3>
+            <button class="alerta_btn">Login</button>
+            <button class="alerta_btn">Cadastre-se</button>
+        </div>
+    </div>    
+</body>
+</html>
