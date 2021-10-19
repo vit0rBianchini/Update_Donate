@@ -13,6 +13,10 @@
     text-transform: none;
 }
 
+.forum_btn:hover{
+    background-color: #d8dde7;
+}
+
 .forum_select{
     width: 183px;
     font-size: 16px;
@@ -56,11 +60,14 @@
 }
 
 .forum_texto-categoria{
-    background-color: #C4C4C4;
+    background-color: #4f266a;
+    background-image: linear-gradient(90deg, #2b137a 60%, #2641a0 100%);
+    color: rgb(206, 206, 206);
     width: fit-content;
+    width: -moz-min-content;
     padding: 2px 12px;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid rgb(44, 44, 44);
     margin: 0 0 8px 0;
 }
 
@@ -81,6 +88,7 @@
 
 .forum_conteudo-usuario{
     width: fit-content;
+    width: -moz-min-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,7 +97,7 @@
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    background-color: black;
+    background-color: var(--cor-fundo);
 }
 
 .forum_usuario{
@@ -103,6 +111,9 @@
     .forum_conteudo-texto{
         display: flex;
         padding: 30px 0 30px 0;
+        
+        width: 75%;
+        
     }
 
     .forum_texto-parteDois{
@@ -121,6 +132,11 @@
         font-size: 20px;
         margin: 0;
     }
+
+    .forum_usuario{
+        margin-top: 3px;
+        margin-bottom: 0px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -130,7 +146,17 @@
     }
 
     .forum_discussao{
-        margin: 0 auto;
+        margin: auto auto;
     }
+
+    .forum_card{
+        max-width: 478px;
+    }
+
+    .forum_conteudo-texto {
+        padding: 15px 0px 15px 0px;
+        width: 78%;
+    }
+
 
 }
