@@ -31,10 +31,11 @@ function aleatorizar(tipo = ''){
 
 posts = [
 ['Eu doei o meu pc mais forte que uso ao invés do meu pc que é velho, o que eu faço?'
-, aleatorizar('nome'), 0, aleatorizar()],
+, aleatorizar('nome'), aleatorizar(), aleatorizar()],
 ['O doador pediu pra eu ir no mato desarmado pra eu receber a doação, como denunciar?',
- aleatorizar('nome'), 15, aleatorizar()], 
-['Como eu baixo a placa de vídeo no meu pc novo?????', aleatorizar('nome'), 4, aleatorizar()]
+ aleatorizar('nome'), aleatorizar(), aleatorizar()], 
+['Como eu baixo a placa de vídeo no meu pc novo?????', aleatorizar('nome'), aleatorizar(), aleatorizar()],
+['Como eu faço para doar um componente?????', aleatorizar('nome'), aleatorizar(), aleatorizar()],
 ];
 
 
