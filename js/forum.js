@@ -18,15 +18,23 @@ let postModel = '';
 }
 */
 
-function rnome(){
-	return nomes[Math.floor(Math.random() * nomes.length)];
+function aleatorizar(tipo = ''){
+	if (tipo === 'nome') {
+		return nomes[Math.floor(Math.random() * nomes.length)];
+	}
+	else {
+		return Math.round(Math.random() * 60);
+	}
+
 }
 
 
 posts = [
-['Eu doei o meu pc mais forte que uso ao invés do meu pc que é velho, o que eu faço?', rnome(), 0],
-['O doador pediu pra eu ir no mato desarmado pra eu receber a doação como denunciar?', rnome(), 15], 
-['Como eu baixo a placa de vídeo no meu pc novo?????', rnome(), 4]
+['Eu doei o meu pc mais forte que uso ao invés do meu pc que é velho, o que eu faço?'
+, aleatorizar('nome'), 0, aleatorizar()],
+['O doador pediu pra eu ir no mato desarmado pra eu receber a doação, como denunciar?',
+ aleatorizar('nome'), 15, aleatorizar()], 
+['Como eu baixo a placa de vídeo no meu pc novo?????', aleatorizar('nome'), 4, aleatorizar()]
 ];
 
 
@@ -36,7 +44,7 @@ for (let i = 0; i < posts.length; i++) {
 	<div class="forum_texto-parteUm">
 	<h2 class="forum_texto-titulo"> ${posts[i][0]}</h2>
 	<div class="forum_texto-categoria">Software</div>
-	<h5 class="forum_texto-dia">Atualizado à 2 min.</h5>
+	<h5 class="forum_texto-dia">Atualizado à ${posts[i][3]} min.</h5>
 	</div>
 	<div class="forum_texto-parteDois">
 	<h5 class="forum_texto-resposta">Respostas:</h5>
