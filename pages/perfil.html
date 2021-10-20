@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UpdateDonate | </title>
+    <title>UpdateDonate | Login</title>
     <link rel="stylesheet" href="../assets/css/perfil.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,8 @@
 
 </head>
 <body id='body'>
+
+
     <header class="cabecalho">
         <div class="cabecalho_div">
             <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" onclick="toggleClassHome()">
@@ -22,23 +24,25 @@
         </div>
         <nav class="cabecalho_navegacao" id="cabNav">
             <div class="usuario">
-                <div class="usuario_img"><img src="" alt=""></div>
-                <a onclick="toCadastro()" class="usuario_link-cadastro">Cadastre-se</a>
+                <div class="usuario_img"><img class="usuario_img-padrao" src="../assets/img/usuarioPadrao.png" alt=""></div>
+                <a href="#" class="usuario_link-cadastro">Usuário</a>
             </div>
             <ul class="cabecalho_itens">
-                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../index.html">Home</a></li>
-                <li class="cabecalho_item--login"><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Login</a></li>
-                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Fórum</a></li>
-                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Doações</a></li>
+                <li><a class="cabecalho_item" href="../index.html">Home</a></li>
+                <li class="cabecalho_item--login"><a class="cabecalho_item" href="#">Sair</a></li>
+                <li><a class="cabecalho_item" href="../pages/forum.html">Fórum</a></li>
+                <li><a class="cabecalho_item" href="../pages/doacoes.html">Doações</a></li>
             </ul>
         </nav>
         <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
     </header>
+
+
     <main class="conteudo_principal">
        
         <div class="perfil_card">
             <div class="perfil_conteudo">
-                <div class="perfil_img-fundo"><img src="" alt="" srcset=""></div>
+                <div class="perfil_img-fundo"><img src="../assets/img/usuarioPadrao.png" alt="" class="perfil_img"></div>
                 <h2 class="perfil_text perfil_text-usuario">Usuário</h2>
             </div>
             <div class="perfil_conteudo">
@@ -46,16 +50,111 @@
                 <a class="perfil_text">Alterar Senha</a> 
             </div>
             <label>
-                <input type="checkbox">Doador
+                <button class="perfil_btn">Torne-se um doador</button>
             </label>
         </div>
         <h2>Suas discussões no fórum</h2>
         <div class="perfil_discusoes">
 
+            <article class="forum_discussao">
+                <a class="forum_card" href="../pages/discussao.html">
+                <div class="forum_conteudo-texto">
+                    <div class="forum_texto-parteUm">
+                        <h2 class="forum_texto-titulo">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h2>
+                        <div class="forum_texto-categoria">Software</div>
+                        <h5 class="forum_texto-dia">Atualizado à 2 min.</h5>
+                    </div>
+                    <div class="forum_texto-parteDois">
+                        <h5 class="forum_texto-resposta">Respostas:</h5>
+                        <h5 class="forum_texto-quantidade">2</h5>
+                    </div>
+                </div>
+                <div class="forum_conteudo-usuario">
+                    <div class="forum_img-fundo"><img class="forum_img" src="../assets/img/usuarioPadrao.png"></div>
+                    <h3 class="forum_usuario">Usuário</h3>
+                </div>
+                </a>
+            </article>
+
+            <article class="forum_discussao">
+                <a class="forum_card" href="../pages/discussao.html">
+                <div class="forum_conteudo-texto">
+                    <div class="forum_texto-parteUm">
+                        <h2 class="forum_texto-titulo">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h2>
+                        <div class="forum_texto-categoria">Software</div>
+                        <h5 class="forum_texto-dia">Atualizado à 2 min.</h5>
+                    </div>
+                    <div class="forum_texto-parteDois">
+                        <h5 class="forum_texto-resposta">Respostas:</h5>
+                        <h5 class="forum_texto-quantidade">2</h5>
+                    </div>
+                </div>
+                <div class="forum_conteudo-usuario">
+                    <div class="forum_img-fundo"><img class="forum_img" src="../assets/img/usuarioPadrao.png"></div>
+                    <h3 class="forum_usuario">Usuário</h3>
+                </div>
+                </a>
+            </article>
+
+
         </div>
         <h2>Seus interreses</h2>
         <div class="perfil_doacoes">
-             
+              <article class="componente">
+                <div class="componente_conteudo">
+                    <div class="componente_conteudo-usuario">
+                        <div class="componente_usuario">
+                            <div class="componente_usuario-img-fundo"><img class="componente_usuario-img" src="../assets/img/usuarioPadrao.png" alt=""></div>
+                            <h3 class="componente_usuario-nome">Usuário</h3>
+                        </div>
+                        <h3 class="componente_texto">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h3>
+                        <div class="componente_conteudo-data">
+                            <h5 class="componente_data">Data de publicação</h5><h5 class="componente_data-dia">dd/mm/yyyy</h5>
+                        </div>
+                    </div>
+                    <div class="componente_conteudo-img">
+                        <img class="componente_img" src="http://s.glbimg.com/po/tt/f/original/2012/01/30/hd.jpg" alt="">
+                    </div>
+                </div>
+                <button class="doacaoes_btn doacaoes_btn-desativo">Aguardando resposta</button>
+            </article>
+
+            <article class="componente">
+                <div class="componente_conteudo">
+                    <div class="componente_conteudo-usuario">
+                        <div class="componente_usuario">
+                            <div class="componente_usuario-img-fundo"><img class="componente_usuario-img" src="../assets/img/usuarioPadrao.png" alt=""></div>
+                            <h3 class="componente_usuario-nome">Usuário</h3>
+                        </div>
+                        <h3 class="componente_texto">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h3>
+                        <div class="componente_conteudo-data">
+                            <h5 class="componente_data">Data de publicação</h5><h5 class="componente_data-dia">dd/mm/yyyy</h5>
+                        </div>
+                    </div>
+                    <div class="componente_conteudo-img">
+                        <img class="componente_img" src="http://s.glbimg.com/po/tt/f/original/2012/01/30/hd.jpg" alt="">
+                    </div>
+                </div>
+                <button class="doacaoes_btn">Chat</button>
+            </article>
+            <article class="componente">
+                <div class="componente_conteudo">
+                    <div class="componente_conteudo-usuario">
+                        <div class="componente_usuario">
+                            <div class="componente_usuario-img-fundo"><img class="componente_usuario-img" src="../assets/img/usuarioPadrao.png" alt=""></div>
+                            <h3 class="componente_usuario-nome">Usuário</h3>
+                        </div>
+                        <h3 class="componente_texto">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h3>
+                        <div class="componente_conteudo-data">
+                            <h5 class="componente_data">Data de publicação</h5><h5 class="componente_data-dia">dd/mm/yyyy</h5>
+                        </div>
+                    </div>
+                    <div class="componente_conteudo-img">
+                        <img class="componente_img" src="http://s.glbimg.com/po/tt/f/original/2012/01/30/hd.jpg" alt="">
+                    </div>
+                </div>
+                <button class="doacaoes_btn">Chat</button>
+            </article>
         </div>
 
         <h2>Pessoas interressadas</h2>
@@ -64,18 +163,18 @@
 
             <div class="card_usuario">
                 <div class="card_usuario-texto-img">
-                    <div class="card_perfil-fundo"><img class="card_perfil-img" src="" alt=""></div>
+                    <div class="card_perfil-fundo"><img class="card_perfil-img" src="../assets/img/usuarioPadrao.png" alt=""></div>
                     <h4 class="card_perfil-txt">Usuário</h4>
                 </div>
                 <div class="card_habilitar-contato">
-                    <div class="aceitar"><img src="" alt=""></div>
-                    <div class="recusar"><img src="" alt=""></div>
+                    <div class="aceitar"><img src="../assets/img/v.png" alt=""></div>
+                    <div class="recusar"><img src="../assets/img/x.png" alt=""></div>
                 </div>
             </div>
 
             <div class="card_usuario">
                 <div class="card_usuario-texto-img">
-                    <div class="card_perfil-fundo"><img class="card_perfil-img" src="" alt=""></div>
+                    <div class="card_perfil-fundo"><img class="card_perfil-img" src="../assets/img/usuarioPadrao.png" alt=""></div>
                     <h4 class="card_perfil-txt">Usuário</h4>
                 </div>
                 <div class="card_habilitar-contato card_habilitar-contato-desativo">
@@ -87,15 +186,49 @@
                 </div>
             </div>
 
-
         </div>
         <h2>Suas Doações</h2>
-        <button>Adicionar doação</button>
+        <button onclick="lookAlert()">Adicionar doação</button>
+
+        <div class="perfil doações">
+            <article class="componente">
+
+                <div class="perfil_gerenciar-doacao">
+                    <img class="perfil_gerenciar-editar" src="../assets/img/edicao.png" alt="editar">
+                    <img class="perfil_gerenciar-excluir" src="../assets/img/lixeira.png" alt="excluir">
+                </div>
+
+                <div class="componente_conteudo">
+                    <div class="componente_conteudo-usuario">
+                        <div class="componente_usuario">
+                            <div class="componente_usuario-img-fundo"><img class="componente_usuario-img" src="../assets/img/usuarioPadrao.png" alt=""></div>
+                            <h3 class="componente_usuario-nome">Usuário</h3>
+                        </div>
+                        <h3 class="componente_texto">Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo</h3>
+                        <div class="componente_conteudo-data">
+                            <h5 class="componente_data">Data de publicação</h5><h5 class="componente_data-dia">dd/mm/yyyy</h5>
+                        </div>
+                    </div>
+                    <div class="componente_conteudo-img">
+                        <img class="componente_img" src="http://s.glbimg.com/po/tt/f/original/2012/01/30/hd.jpg" alt="">
+                    </div>
+                </div>
+            </article>
         </div>
-
-
-
+        
     </main>
+    <div class="alerta_backgrand " id="alerta">
+        <div class="alerta_conteudo">
+            <label class="alerta_texto">Titulo</label>
+            <input type="text" required>
+            <label class="alerta_texto alerta_texto-segundo">Descrição</label>
+            <input type="text" required>
+            <label class="alerta_texto alerta_texto-segundo">Imagem</label>
+            <input type="url" required>
+            <button class="alerta_btn">Enviar</button>
+            <button class="alerta_btn" onclick="lookAlert()">Cancelar</button>
+        </div>
+    </div>    
 
 </body>
 </html>

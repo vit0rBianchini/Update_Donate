@@ -29,7 +29,7 @@ input::placeholder{
 button{
     height: 35px;
     background-color: #2b137a;
-    color: var(--cor-fundo);
+    color: var(--cor-secondary);
 
     width: 170px;
     margin-top: 35px;

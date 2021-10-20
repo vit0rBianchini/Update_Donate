@@ -2,6 +2,9 @@
 @import url(../css/cabecalho.css);
 @import url(../css/conteudo.css);
 @import url(../css/formulario.css);
+@import url(../css/forum.css);
+@import url(../css/doacoes.css);
+@import url(../css/alerta.css);
 
 .conteudo_principal > h2 {
 	text-align: center;
@@ -38,6 +41,9 @@
 	margin: 20px 0px
 }
 .perfil_img-fundo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 70px;
 	height: 70px;
 	background-color: aliceblue;
@@ -45,16 +51,23 @@
 
 }
 
+.perfil_img{
+	width: 70%;
+}
 
+.perfil_btn{
+    width: 183px;
+    font-size: 16px;
+    background-color: var(--cor-secondary);
+    color: black;
+    box-shadow: none;
+    border: solid black 1px;
+    margin: 0px;
+    text-transform: none;
+}
 
-input[type="checkbox"]{
-	margin-top: 10px;
-	margin-right: 10px;
-	width: auto;
-	height: auto;
-	border: 1px black solid;
-	border-radius: 50px;
-	
+.perfil_btn:hover{
+    background-color: #d8dde7;
 }
 
 /* Usuários interessados card */
@@ -84,8 +97,20 @@ input[type="checkbox"]{
 	background-color: var(--cor-fundo);
 	border-radius: 30px;
 	margin-right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
+.card_perfil-img{
+
+	width: 70%;
+}
+
 .aceitar, .recusar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	cursor: pointer;
 	width: 30px;
 	height: 30px;
@@ -93,6 +118,11 @@ input[type="checkbox"]{
 	border: 1px solid black;
 	
 }
+
+.aceitar > img, .recusar > img{
+	width: 60%;
+}
+
 
 .aceitar:hover, .recusar:hover{
 	filter: saturate(70%);
@@ -116,8 +146,13 @@ input[type="checkbox"]{
 	max-width: 90px;
 	display: flex;
 	justify-content: center;
-	height: 40px;
-	border-radius: 18px;
+	height: 30px;
+	border-radius: 20px;
+}
+
+.card_habilitar-contato-habilitado:hover{
+	cursor: pointer;
+	background-color: #402067;
 }
 
 
@@ -134,22 +169,56 @@ input[type="checkbox"]{
 }
 
 .habilitado{
-	cursor: pointer;
 	display: flex;
 	align-items: center;
 }
 
 .habilitado > a{
 	font-weight: bold;
-}
-
-.habilitado:hover{
-	filter: saturate(0%);
+	font-size: 14px;
 }
 
 button{
 	margin-top: 10px;
 	font-size: 14px;
+}
+
+/* Doações classe perfil */
+
+.perfil_gerenciar-doacao {
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	display: flex;
+	align-self: flex-end;
+}
+
+.doacaoes_btn-desativo{
+	cursor: default;
+	filter: saturate(0%);
+}
+
+.doacaoes_btn-desativo:hover{
+	background-color: var(--cor-primary);
+}
+
+/* Alerta */
+
+.alerta_conteudo{
+	width: 90vw;
+	max-width: 350px;
+}
+
+.alerta_texto{
+	font-weight: bold;
+}
+
+.alerta_texto-segundo{
+	margin-top: 0px;
+}
+
+.alerta_conteudo > input{
+	margin-bottom: 25px;
 }
 
 @media screen and (min-width: 1024px) {

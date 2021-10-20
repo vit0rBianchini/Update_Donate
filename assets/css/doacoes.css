@@ -20,6 +20,10 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.53);
 }
 
+.componente_conteudo:last-child{
+    margin-bottom: 30px;
+}
+
 .componente_conteudo-usuario, .componente_usuario, .componente_conteudo-img{
     display: flex;
     flex-direction: column;
