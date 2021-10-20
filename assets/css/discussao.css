@@ -1,0 +1,117 @@
+.discussao_conteudo-principal, .discussao_comentario{
+    width: 80vw;
+    max-width: 300px;
+    padding: 0 25px 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black ;
+}
+
+.discussao_usuario-fundo, .discussao_conteudo-img-fundo {
+    margin-top: 30px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+.discussao_usuario-img, .discussao_conteudo-img{
+    width: calc(100% - 15px);
+}
+
+.discussao_informacao{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+}
+
+.discussao_texto-dia, .discussao_data{
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.discussao_texto-categoria{
+    font-size: 12px;
+    width: auto;
+    background-image: linear-gradient(90deg, #2b137a 60%, #2641a0 100%);
+    color: rgb(206, 206, 206);
+    width: fit-content;
+    width: -moz-min-content;
+    padding: 2px 12px;
+    border-radius: 5px;
+    border: 1px solid rgb(44, 44, 44);
+}
+
+.discussao_quantidade-respostas{
+    display: flex;
+}
+
+.discussao_quantidade-texto{
+    margin: 10px 0;
+}
+
+.discussao_quantidade-texto:nth-child(2){
+    margin-left: 5px;
+}
+
+.discussao_conteudo-img-fundo{
+    width: 50px;
+    height: 50px;
+}
+
+.discussao_conteudo-autor, .discussao_conteudo-data, .discussao_conteudo-usuario{
+    display: flex;
+}
+
+.discussao_conteudo-usuario{
+    align-items: center;
+}
+
+.discussao_conteudo-img-fundo{
+    margin: auto 10px auto 0 ;
+}
+
+.discussao_conteudo-data-texto:nth-child(2), .discussao_conteudo-nome:nth-child(2){
+    margin-left: 5px;
+}
+
+.discussao_conteudo-data-texto, .discussao_conteudo-nome{
+    margin: 10px 0;
+}
+
+.discussao_adicionar-comentario{
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.discussao_btn{
+    font-size: 12px;
+    text-transform: none;
+    margin: 20px 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .discussao_conteudo-principal, .discussao_comentario{
+        max-width: 500px;
+    }
+    .discussao_informacao{
+        justify-content: flex-start;
+    }
+    .discussao_texto-dia{
+        margin: auto 5px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .discussao_conteudo-principal, .discussao_comentario{
+        max-width: 800px;
+    }
+
+    .discussao_adicionar-comentario{
+        justify-content: center;
+    }
+}

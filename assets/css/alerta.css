@@ -1,0 +1,43 @@
+.alerta_backgrand{
+    visibility: hidden;
+    z-index: 101;
+}
+
+.alerta_backgrand-ativo{
+    visibility: visible;
+    transition: 0.6s;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alerta_conteudo{
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    background: #161616;
+    width: 290px;
+}
+
+.alerta_texto{
+    color: var(--cor-fundo);
+    width: 70%;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.alerta_btn{
+    margin: 5px;
+}
+
+.alerta_btn:last-child{
+    margin-bottom: 70px;
+}

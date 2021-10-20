@@ -1,0 +1,153 @@
+@import url(../css/normalize.css);
+@import url(../css/cabecalho.css);
+@import url(../css/conteudo.css);
+@import url(../css/formulario.css);
+
+.conteudo_principal {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo_apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo_apresentacao-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update_donate-art {
+    width: 100vw;
+    margin-top: 30px;
+}
+
+.titulo_principal {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;
+    color: #353554;
+    margin-bottom: 20px;
+}
+
+.titulo_secundario {
+    padding: 0 4px 0 4px;
+    width: 95vw;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+
+#itens-bar {
+    margin-top: 200px;
+    width: 325px;
+    height: 275px;
+    background-color: #FFFFFF;
+}
+
+.footer {
+    width: 100vw;
+    background-color: #E9E9E9;
+    margin-top: 30px;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-icon {
+    margin: 10px 0 30px 0;
+
+}
+.footer_img-logo {
+    margin-top: 10px;
+    width: 40px;
+
+}
+
+.footer-label {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+    width: 70%;
+    text-align: center;
+
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.priv-link {
+    margin-bottom: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+    .update_donate-art{
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .conteudo_apresentacao-principal {
+        width: 70vw;
+        max-width: 1000px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .conteudo_apresentacao {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+    }
+
+    
+    .update_donate-art {
+        max-width: 430px;
+    }
+
+    .titulo_principal {
+        width: 70%;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 32px;
+        color: #353554;
+        margin-bottom: 20px;
+    }
+    
+    .titulo_secundario {
+        padding: 0 4px 0 4px;
+        width: 60%;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+
+    .footer {
+        width: 100vw;
+        background-color: #E9E9E9;
+        margin-top: 30px;;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    
+
+
+}

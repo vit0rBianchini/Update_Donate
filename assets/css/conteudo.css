@@ -2,6 +2,9 @@
 Por exemplo: tags que se repetem muito ficam aqui ou contudo que aplica no site inteiro
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@500;700&family=Roboto:wght@700&display=swap');
+
+
 body{
     background-color: var(--cor-fundo);
     font-family: 'Noto Sans Display', sans-serif;
@@ -11,10 +14,41 @@ body{
     overflow: hidden;
 }
 
+h1{
+    font-size: 22px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+h3{
+    font-size: 16px;
+}
+
+h4{
+    font-size: 12px;
+}
+
+
 :root{
-    --cor-fundo: #CFCFCF;
+    --cor-fundo: #aaaaaa;
     --cor-primary: #2B137A ;
     --cor-secondary: #E9E9E9;
+}
+
+::-webkit-scrollbar {
+    width: 5px;            /* width of the entire scrollbar */
+}
+  
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.20);     /* color of the tracking area */
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: rgba(70, 70, 70, 0.7);    
+    border-radius: 2px;
+    width: 3px;       
 }
 
 .conteudo_principal {
@@ -26,5 +60,12 @@ body{
 
 .titulo_principal {
     margin-top: 30px;
-    font-size: larger;
+    width: 90vw;
+    font-size: 22px;
+}
+
+@media screen and (min-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 10px;            /* width of the entire scrollbar */
+    }
 }

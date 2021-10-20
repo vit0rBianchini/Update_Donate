@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UpdateDonate | Página Principal</title>
+    <title>UpdateDonate | Página de cadastro</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/cabecalho.css">
     <link rel="stylesheet" href="../assets/css/conteudo.css">
     <link rel="stylesheet" href="../assets/css/formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script src="../js/scripts.js"></script>
 </head>
@@ -22,23 +26,23 @@
         </div>
         <nav class="cabecalho_navegacao" id="cabNav">
             <div class="usuario">
-                <div class="usuario_img"></div>
+                <div class="usuario_img"><img class="usuario_img-padrao" src="../assets/img/usuarioPadrao.png" alt=""></div>
                 <a href="#" class="usuario_link-cadastro">Cadastre-se</a>
             </div>
             <ul class="cabecalho_itens">
-                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="../index.html">Home</a></li>
-                <li class="cabecalho_item--login"><a class="cabecalho_item" onclick="toggleClassHome()" href="../pages/login.html">Login</a></li>
-                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Fórum</a></li>
-                <li><a class="cabecalho_item" onclick="toggleClassHome()" href="#">Doações</a></li>
+                <li><a class="cabecalho_item" href="../index.html">Home</a></li>
+                <li class="cabecalho_item--login"><a class="cabecalho_item" href="../pages/login.html">Login</a></li>
+                <li><a class="cabecalho_item" href="../pages/forum.html">Fórum</a></li>
+                <li><a class="cabecalho_item" href="../pages/doacoes.html">Doações</a></li>
             </ul>
         </nav>
         <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
     </header>
     <main class="conteudo_principal">
-        <h1 class="titulo_principal">Cadastre-se</h1>
+        <h1>Cadastre-se</h1>
         <form class="formulario" action="">
             <label for="usario">Usuário</label>
-            <input type="text" id="usario" required placeholder="Nome de usuário">
+            <input type="text" id="usario" required>
 
             <label for="nome">Nome</label>
             <input type="text" id="nome" required>
@@ -53,7 +57,7 @@
             <input type="password" id="senha" required>
 
             <label for="confSenha">Confirmar senha</label>
-            <input type="text" id="confSenha" required>
+            <input type="password" id="confSenha" required>
 
         </form>
 
