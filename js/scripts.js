@@ -19,3 +19,14 @@ const lookAlert = () =>{
     const body = document.getElementById('body');
     body.classList.toggle('body-ativo')
 }
+
+const statusDoador = [false]
+
+const torneseDoador = () => {
+    statusDoador.splice(0,1,true)
+    const conteudoDoador1 = document.getElementById('conteudoDoador1')
+    const conteudoDoador2 = document.getElementById('conteudoDoador2')
+    console.log(statusDoador)
+    conteudoDoador1.classList.toggle('conteudo_desativado')
+    conteudoDoador2.classList.toggle('conteudo_desativado')
+}
