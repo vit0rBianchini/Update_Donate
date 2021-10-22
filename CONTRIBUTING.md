@@ -1,4 +1,0 @@
-Contribuidores:
-
-@vitoBianchiini
-@LuizLLPz
