@@ -19,14 +19,35 @@ const Deletar = () => {
     imgEditar.addEventListener('click', excluir)
     return imgEditar
 }
+
+const alertaDeletaDoacao = () => {
+    const alerta = document.getElementById('alerta-excluirDoacao');
+    alerta.classList.toggle('alerta_backgrand-ativo');
+    const body = document.getElementById('body');
+    body.classList.toggle('body-ativo')
+}
+
 const excluir = (event) => {
-    let articleConteudo = event.target.parentElement.parentElement
-    articleConteudo = articleConteudo.children[0].children[0].children[1]
-    for(let i = 0; i < listaDeDoacoesUsuario.length; i++){
-        if(articleConteudo.innerText == listaDeDoacoesUsuario[i][1])
-        listaDeDoacoesUsuario.splice(i,1)
-    }
-    atualizaDoacoes()
+    alertaDeletaDoacao()
+    
+    const excluirDoacao = document.getElementById('excluirDoacao')
+    console.log(event)
+
+    excluirDoacao.addEventListener('click', () => {
+        let articleConteudo1 = event.target.parentElement.parentElement
+        const articleConteudo = articleConteudo1.children[0].children[0].children[1]
+        for(let i = 0; i < listaDeDoacoesUsuario.length; i++){
+            if(articleConteudo.innerText == listaDeDoacoesUsuario[i][1]){
+                articleConteudo1.remove()
+                listaDeDoacoesUsuario.splice(i,1)
+            }
+        }
+        atualizaDoacoes()
+        
+    })
+    excluirDoacao.addEventListener('click', alertaDeletaDoacao)
+    
+    
 }
 
 
