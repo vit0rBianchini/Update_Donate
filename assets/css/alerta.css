@@ -1,11 +1,13 @@
 .alerta_backgrand{
     visibility: hidden;
     z-index: 101;
+    width: 100vw;
+    height: 0;
 }
 
 .alerta_backgrand-ativo{
     visibility: visible;
-    transition: 0.6s;
+    
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);

@@ -70,16 +70,37 @@
     background-color: #d8dde7;
 }
 
+.perfil_entrada-forum{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.perfil_entrada-discusao-texto{
+	margin-top: 10px;
+	border: 1px solid black;
+	width: 55vw;
+	max-width: 500px;
+	padding: 20px;
+	border-radius: 15px;
+	background-color: var(--cor-secondary);
+}
+
+.forum_discussao{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 /* Usuários interessados card */
 
 .card_usuario{
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	justify-content: space-around;
 	width: 80vw;
-	max-width: 300px;
+	max-width: 320px;
 	margin-bottom: 20px;
-	height: 80px;
 	background-color: var(--cor-secondary);
 	border-radius: 25px;
 	border: 1px black solid;
@@ -89,6 +110,7 @@
 .card_usuario-texto-img{
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 }
 
 .card_perfil-fundo{
@@ -96,15 +118,24 @@
 	height: 50px;
 	background-color: var(--cor-fundo);
 	border-radius: 30px;
-	margin-right: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin: 10px 0;
 }
 
 .card_perfil-img{
 
 	width: 70%;
+}
+
+.card_perfil-txt{
+	text-align: center;
+	font-size: 14px;
+}
+
+.card_perfil-txt, .card_perfil-descricaoItem{
+	margin: 20px;
 }
 
 .aceitar, .recusar{
@@ -116,6 +147,7 @@
 	height: 30px;
 	border-radius: 15px;
 	border: 1px solid black;
+	margin: 10px 0;
 	
 }
 
@@ -148,6 +180,7 @@
 	justify-content: center;
 	height: 30px;
 	border-radius: 20px;
+	margin: 10px 0;
 }
 
 .card_habilitar-contato-habilitado:hover{
@@ -183,12 +216,21 @@ button{
 	font-size: 14px;
 }
 
+.perfil_gerenciar-forum {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: flex;
+	align-self: flex-end;
+}
 /* Doações classe perfil */
+
+
 
 .perfil_gerenciar-doacao {
 	position: absolute;
-	top: 20px;
-	right: 25px;
+	top: 10px;
+	right: 10px;
 	display: flex;
 	align-self: flex-end;
 }
@@ -208,7 +250,10 @@ button{
 	width: 90vw;
 	max-width: 350px;
 }
-
+.alerta_conteudo-perfil{
+	max-width: min-content;
+	padding: 30px;
+}
 .alerta_texto{
 	font-weight: bold;
 }
@@ -218,7 +263,7 @@ button{
 }
 
 .alerta_conteudo > input{
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -250,6 +295,50 @@ button{
 		margin: 0px 20px;
 	}
 
+	.card_usuario{
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 80vw;
+		max-width: 500px;
+		margin-bottom: 20px;
+		background-color: var(--cor-secondary);
+		border-radius: 25px;
+		border: 1px black solid;
+		box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.25);
+	}
+
+	.card_perfil-fundo{
+		width: 50px;
+		height: 50px;
+		background-color: var(--cor-fundo);
+		border-radius: 30px;
+		margin-right: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.card_usuario-texto-img{
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: center;
+		width: 30vw;
+		max-width: 300px;
+	}
+
+	.card_perfil-conteudo{
+		width: 70%;
+	}
+	.card_perfil-txt{
+		text-align: start;
+	}
+	.card_perfil-txt, .card_perfil-descricaoItem{
+		margin: 10px;
+	}
+
 }
 #conteudoDoador1, #conteudoDoador2{
 	display: flex;
@@ -258,5 +347,7 @@ button{
 }
 
 .conteudo_desativado{
+	width: 99vw;
+	height: 0;
 	visibility: hidden;
 }
