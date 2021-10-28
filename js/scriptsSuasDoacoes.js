@@ -31,14 +31,15 @@ const excluir = (event) => {
     alertaDeletaDoacao()
     
     const excluirDoacao = document.getElementById('excluirDoacao')
-    console.log(event)
+    const cancelarDoacao = document.getElementById('cancelarExcluir')
 
     excluirDoacao.addEventListener('click', () => {
         let articleConteudo1 = event.target.parentElement.parentElement
         const articleConteudo = articleConteudo1.children[0].children[0].children[1]
+
         for(let i = 0; i < listaDeDoacoesUsuario.length; i++){
             if(articleConteudo.innerText == listaDeDoacoesUsuario[i][1]){
-                articleConteudo1.remove()
+                
                 listaDeDoacoesUsuario.splice(i,1)
             }
         }
@@ -46,6 +47,7 @@ const excluir = (event) => {
         
     })
     excluirDoacao.addEventListener('click', alertaDeletaDoacao)
+    cancelarDoacao.addEventListener('click', alertaDeletaDoacao)
     
     
 }
@@ -87,8 +89,33 @@ const editarComponente = () => {
     textoEditar.splice(0,1)
     atualizaDoacoes()
     lookAlert()
+    const limpaTitulo = document.getElementById('tituloEditado')
+    const limpaImg = document.getElementById('imgEditado')
+
+    limpaTitulo.value = ''
+    limpaImg.value = ''
+
 }
 
+const alertaAddDoacao = () => {
+    const alerta = document.getElementById('alerta-doador');
+    alerta.classList.toggle('alerta_backgrand-ativo');
+    const body = document.getElementById('body');
+    body.classList.toggle('body-ativo')
+
+    const conteudo = `
+    <div class="alerta_conteudo" id="alerta_conteudo">
+    <h1 class="alerta_texto">Doação postada com sucesso</h1>
+    <h3 class="alerta_texto alerta_texto-segundo">Sua postagem foi postada, aguarde um interrese de um donatário</h3>
+    <button id="concluidoDoacao">Concluido</button>
+    </div>
+    `
+
+    alerta.innerHTML = conteudo
+
+    const concluidoDoacao = document.getElementById('concluidoDoacao')
+    concluidoDoacao.addEventListener('click', alertaAddDoacao)
+}
 
 const addDoacao = () => {
     
@@ -96,12 +123,21 @@ const addDoacao = () => {
     const titulo = document.getElementById('tituloDoacao').value
     const img = document.getElementById('imgDoacao').value
     dados.push(img)
-    console.log(img)
+
     dados.push(titulo)
     listaDeDoacoesUsuario.push(dados)
-    console.log(listaDeDoacoesUsuario)
+
+    const limpaTitulo = document.getElementById('tituloDoacao')
+    const limpaImg = document.getElementById('imgDoacao')
+
+    limpaTitulo.value = ''
+    limpaImg.value = ''
+    
+    alertaAddDoacao()
     atualizaDoacoes()
+
 }
+
 
 btnAdd.addEventListener('click', addDoacao)
 

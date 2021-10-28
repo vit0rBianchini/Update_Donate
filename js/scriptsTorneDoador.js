@@ -37,7 +37,6 @@ const mostraAlertarDoador = () => {
 
 const trocarStatus = () => {
     const conteudoDoador1 = document.getElementById('conteudoDoador1')
-    console.log(conteudoDoador1)
     const conteudoDoador2 = document.getElementById('conteudoDoador2')
     if(statusDoador[0] == true){
         statusDoador.splice(0,1,false)

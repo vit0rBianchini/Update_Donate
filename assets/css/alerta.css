@@ -30,16 +30,17 @@
 }
 
 .alerta_texto{
-    color: var(--cor-fundo);
+    color: var(--cor-secondary);
     width: 70%;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 30px;
+    
 }
 
-.alerta_btn{
-    margin: 5px;
+.alerta_conteudo button{
+    margin-bottom: 10px;
 }
 
-.alerta_btn:last-child{
-    margin-bottom: 70px;
+.alerta_conteudo button:last-child{
+    margin-bottom: 30px;
 }

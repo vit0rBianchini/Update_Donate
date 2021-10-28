@@ -1,7 +1,6 @@
 const interresesDoUsuario = [["Natan", "titulo titulo titulo titulo titulo titulo titulo","http://s.glbimg.com/po/tt/f/original/2012/01/30/hd.jpg", "dd/mm/yyyy", false],["Natan", "titulo titulo titulo titulo titulo titulo titulo","http://s.glbimg.com/po/tt/f/original/2012/01/30/hd.jpg", "dd/mm/yyyy", true]]
 
 const btnChatAtivo = (index) => {
-    console.log(index[4])
     const btnSeusInterreses = document.createElement('button')
     btnSeusInterreses.classList.add('doacaoes_btn')    
     if(index[4] == true){
@@ -13,7 +12,6 @@ const btnChatAtivo = (index) => {
         btnSeusInterreses.classList.add('doacaoes_btn-desativo')
          
     }
-    console.log(btnSeusInterreses)
     return btnSeusInterreses
 }
 

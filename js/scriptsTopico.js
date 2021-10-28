@@ -1,11 +1,11 @@
 const discussoesForumUsuario = [["Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titulo", "Text Text Text Text Text Text Text", "Software",[["RespostaTitulo", "RespostaTxt RespostaTxt RespostaTxt RespostaTxt RespostaTxt RespostaTxt RespostaTxt"]]],["Titulo", "Text Text Text Text Text Text Text", "Hardware",[["RespostaTitulo", "RespostaTxt RespostaTxt RespostaTxt RespostaTxt RespostaTxt RespostaTxt RespostaTxt"],[],[]]]]
 const enviarDiscussao = document.querySelector('[data-enviarDiscussao]')
 
-itemParaDeletar = []
+const itemParaDeletar = []
 
 const deleta = () => {
     let i = 0
-    
+
     discussoesForumUsuario.forEach((index) => {
         if(index[0] == itemParaDeletar[0]){
             discussoesForumUsuario.splice(i, 1)
@@ -23,7 +23,6 @@ const deletarPost = (event) => {
     const itemDeletar = event.target.parentElement.parentElement.parentElement.children[0].children[0].children[0].children[0].innerText
 
     itemParaDeletar.push(itemDeletar)
-    console.log(itemParaDeletar)
    
     
 }
@@ -83,7 +82,11 @@ const mostraAlertaEditForum = (event) => {
     body.classList.toggle('body-ativo')
     const titulo = event.target.parentElement.parentElement.children[0].children[0].children[0]
     
-    console.log(event)
+    
+    const inputForumAlert = document.getElementById('inputForumAlert')
+    inputForumAlert.value = ''
+    const alertaTxt = document.getElementById('alertaTxt')
+    alertaTxt.value = ''
     itemParaEditar.push(titulo)
     
     const cancelarEdicaoForum = document.getElementById('cancelarEdicaoForum')
@@ -115,8 +118,13 @@ const enviar = () => {
     dados.push([])
     discussoesForumUsuario.push(dados)
     
+   
     atualizaDiscussoes()
     mostraAlertaAddForum()
+    const limpaTitulo = document.getElementById('tituloForum')
+    limpaTitulo.value = ''
+    const limpaTxt =document.getElementById('txtForum')
+    limpaTxt.value = ''
 }
 
 const mostraAlertaAddForum = () => {
@@ -130,6 +138,8 @@ const mostraAlertaAddForum = () => {
 
     enviarDiscussao.addEventListener('click', enviar)
     cancelarDiscussao.addEventListener('click', mostraAlertaAddForum)
+
+    
 }
 
 const addDiscusao = () => {
