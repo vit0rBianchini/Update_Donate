@@ -1,3 +1,7 @@
+.alertas{
+    height: 0px;
+}
+
 .alerta_backgrand{
     visibility: hidden;
     z-index: 101;
@@ -27,6 +31,7 @@
     align-items: center;
     background: #161616;
     width: 290px;
+    padding: 30px;
 }
 
 .alerta_texto{

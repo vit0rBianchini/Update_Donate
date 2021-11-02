@@ -84,9 +84,17 @@ const mostraAlertaEditForum = (event) => {
     
     
     const inputForumAlert = document.getElementById('inputForumAlert')
-    inputForumAlert.value = ''
+    inputForumAlert.value = event.target.parentElement.parentElement.children[0].children[0].children[0].innerText
+    const selectForumAlert = document.getElementById('selectForumAlert')
+    selectForumAlert.value = event.target.parentElement.parentElement.children[0].children[0].children[1].innerText
+
     const alertaTxt = document.getElementById('alertaTxt')
-    alertaTxt.value = ''
+    discussoesForumUsuario.forEach((i) => {
+        if(i[0] == inputForumAlert.value){
+
+            alertaTxt.value = i[1]
+        }
+    })
     itemParaEditar.push(titulo)
     
     const cancelarEdicaoForum = document.getElementById('cancelarEdicaoForum')

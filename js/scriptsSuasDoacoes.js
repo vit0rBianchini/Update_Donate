@@ -66,6 +66,10 @@ const textoEditar = []
 const editarElemento = (event) => {
     lookAlert()
     const articleConteudo = event.target.parentElement.parentElement
+    const tituloEditado = document.getElementById('tituloEditado')
+    const img = document.getElementById('imgEditado')
+    tituloEditado.value = event.target.parentElement.parentElement.children[0].children[0].children[1].innerText
+    img.value = event.target.parentElement.parentElement.children[0].children[1].children[0].currentSrc
     
     textoEditar.push(articleConteudo.children[0].children[0].children[1].innerText)
 
@@ -105,26 +109,53 @@ const alertaAddDoacao = () => {
 
     const conteudo = `
     <div class="alerta_conteudo" id="alerta_conteudo">
-    <h1 class="alerta_texto">Doação postada com sucesso</h1>
-    <h3 class="alerta_texto alerta_texto-segundo">Sua postagem foi postada, aguarde um interrese de um donatário</h3>
-    <button id="concluidoDoacao">Concluido</button>
+    <h1 class="alerta_texto">Você deseja postar sua Doação?</h1>
+    <h3 class="alerta_texto alerta_texto-segundo">Ao clicar em "confirmar" todos teram acesso a sua doação</h3>
+    <button id="confirmarDoacao">Confirma</button>
+    <button id="cancelarDoacao">Cancelar</button>
     </div>
     `
 
     alerta.innerHTML = conteudo
 
-    const concluidoDoacao = document.getElementById('concluidoDoacao')
-    concluidoDoacao.addEventListener('click', alertaAddDoacao)
+    const confirmarDoacao = document.getElementById('confirmarDoacao')
+    const cancelarDoacao = document.getElementById('cancelarDoacao')
+    cancelarDoacao.addEventListener('click', alertaAddDoacao)
+    confirmarDoacao.addEventListener('click', addDoacao)
 }
+const alertaConfirmacaoDoacao = () => {
+    const alerta = document.getElementById('alerta-doador');
+    alerta.classList.toggle('alerta_backgrand-ativo');
+    const body = document.getElementById('body');
+    body.classList.toggle('body-ativo')
 
+    const conteudo = `
+    <div class="alerta_conteudo" id="alerta_conteudo">
+    <h1 class="alerta_texto">Operação realizada com sucesso</h1>
+    <button id="confirmarDoacao">Concluido</button>
+    </div>
+    `
+    alerta.innerHTML = conteudo
+    const confirmarDoacao = document.getElementById('confirmarDoacao')
+    confirmarDoacao.addEventListener('click', alertaConfirmacaoDoacao)
+
+}
 const addDoacao = () => {
     
     const dados = []
     const titulo = document.getElementById('tituloDoacao').value
     const img = document.getElementById('imgDoacao').value
-    dados.push(img)
+    const data = new Date()
+    const dia = data.getUTCDate()
+    const mes = data.getUTCMonth() + 1
+    const ano = data.getFullYear()
 
+    const dataDePublicacao = []
+    dataDePublicacao.push(dia, mes, ano)
+    
+    dados.push(img)
     dados.push(titulo)
+    dados.push(dataDePublicacao)
     listaDeDoacoesUsuario.push(dados)
 
     const limpaTitulo = document.getElementById('tituloDoacao')
@@ -134,12 +165,13 @@ const addDoacao = () => {
     limpaImg.value = ''
     
     alertaAddDoacao()
+    alertaConfirmacaoDoacao()
     atualizaDoacoes()
 
 }
 
 
-btnAdd.addEventListener('click', addDoacao)
+btnAdd.addEventListener('click', alertaAddDoacao)
 
 const atualizaDoacoes = () => {
     const suasDoacoes = document.getElementById('suasDoacoes')
@@ -157,7 +189,7 @@ const atualizaDoacoes = () => {
         </div>
         <h3 class="componente_texto">${index[1]}</h3>
         <div class="componente_conteudo-data">
-            <h5 class="componente_data">Data de publicação</h5><h5 class="componente_data-dia">dd/mm/yyyy</h5>
+            <h5 class="componente_data">Data de publicação</h5><h5 class="componente_data-dia">${index[2][0]+"/"+index[2][1]+"/"+index[2][2]}
         </div>
     </div>
     <div class="componente_conteudo-img">

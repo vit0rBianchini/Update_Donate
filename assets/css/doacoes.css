@@ -62,7 +62,7 @@
 .componente_conteudo-img{
     background-image: linear-gradient(90deg, #2b137a 60%, #2641a0 100%);
     width: min-content;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 5px;
 }
 
