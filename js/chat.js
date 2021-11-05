@@ -1,7 +1,7 @@
 const chat = document.querySelector('.chat_mensagens')
 const inputChat = document.querySelector('#imp_chat');
 const labelDestinatario = document.querySelector('.chat_usuario-txt');
-//244833
+//245833
 let conversa;
 let usrId = 245833
 
@@ -16,9 +16,10 @@ else {
 
 atualizarChat = (tipo, mensagem = undefined) => {
 	if (tipo === 'simples'){
-		chat.innerHTML += `<div class="mensagem chat_campo-mensagem-remetente">
+		chat.innerHTML += `<div class="mensagem chat_campo-mensagem-remetente id="teste">
 		<p class="chat_campo-mensagem-texto">${mensagem.texto}</p></div>`
-	}
+		
+	} 
 	else if (tipo === 'completo') {
 
 		for (let i = 0; i < conversa.length; i++) {
@@ -28,10 +29,14 @@ atualizarChat = (tipo, mensagem = undefined) => {
 			<p class="chat_campo-mensagem-texto">${conversa[i].texto}</p></div>`
 		}
 	}
+	const ultima = chat.lastChild
+	ultima.setAttribute('id', "mensagem_final")
+	location.href = '#mensagem_final'
+	ultima.setAttribute('id', "")
 }
 
 enviarMensagem = () => {
-	let mensagem = { 'texto' :  inputChat.value,
+	const mensagem = { 'texto' :  inputChat.value,
 					 'horario' : Date.now(),
 					 'id_usuario' : usrId
 	}
