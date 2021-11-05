@@ -1,5 +1,5 @@
 const doacoesContainer = document.querySelector('.componentes');
-let doacoes = ['', '', '', '', '']
+let doacoes = ['', '', '', '', '', '']
 
 const atualizarPosts = function() {
 	console.log('criador chamado');
