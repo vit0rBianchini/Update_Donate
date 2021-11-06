@@ -6,7 +6,7 @@
     background-color: var(--cor-secondary);
     position: fixed;
     top: 5px;
-    width: calc(100vw - 5px);
+    width: calc(100vw - 6px);
     display: flex;
     border-radius: 0 50px 50px 0;
     justify-content: center;
@@ -134,7 +134,7 @@
 
 @media screen and (min-width: 1024px) {
     .cabecalho {
-        width: calc(100vw - 21px);
+        width: calc(100vw - 10px);
         justify-content: space-around;
         top: 0;
     }

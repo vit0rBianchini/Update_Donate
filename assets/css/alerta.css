@@ -3,14 +3,14 @@
 }
 
 .alerta_backgrand{
-    visibility: hidden;
+    display: none;
     z-index: 101;
     width: 100vw;
     height: 0;
 }
 
 .alerta_backgrand-ativo{
-    visibility: visible;
+    display: none;
     
     width: 100vw;
     height: 100vh;
@@ -39,11 +39,30 @@
     width: 70%;
     text-align: center;
     margin-top: 30px;
+    font-weight: bold;
     
 }
 
+.alerta_conteudo{
+	width: 90vw;
+	max-width: 200px;
+}
+.alerta_conteudo-perfil{
+	max-width: min-content;
+	
+}
+
+.alerta_texto-segundo{
+	margin-top: 0px;
+	font-weight: 400;
+}
+
+.alerta_conteudo > input{
+	margin-bottom: 10px;
+}
+
 .alerta_conteudo button{
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .alerta_conteudo button:last-child{

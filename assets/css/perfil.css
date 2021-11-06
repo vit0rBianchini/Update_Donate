@@ -63,6 +63,7 @@
     box-shadow: none;
     border: solid black 1px;
     margin: 0px;
+	margin-top: 10px;
     text-transform: none;
 }
 
@@ -225,6 +226,11 @@ button{
 }
 /* Doações classe perfil */
 
+.entrada_doacoes{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
 
 
 .perfil_gerenciar-doacao {
@@ -248,7 +254,7 @@ button{
 
 .alerta_conteudo{
 	width: 90vw;
-	max-width: 350px;
+	max-width: 200px;
 }
 .alerta_conteudo-perfil{
 	max-width: min-content;
@@ -267,7 +273,21 @@ button{
 	margin-bottom: 10px;
 }
 
+.input-invalido-erro{
+	display: block;
+}
+
+@media screen and (min-width: 768px){
+	.alerta_conteudo{
+
+		max-width: 300px;
+	}
+}
+
 @media screen and (min-width: 1024px) {
+	.alerta_conteudo{
+		max-width: 400px;
+	}
 	.perfil_card{
 
 		width: 70vw;

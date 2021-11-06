@@ -135,23 +135,28 @@ const enviar = () => {
     limpaTxt.value = ''
 }
 
-const mostraAlertaAddForum = () => {
+const mostraAlertaAddForum = (event) => {
+    event.preventDefault()
+
     const alerta = document.getElementById('alerta-confirmarEnvioAoForum');
     alerta.classList.toggle('alerta_backgrand-ativo');
     const body = document.getElementById('body');
-    body.classList.toggle('body-ativo')
-
+    body.classList.toggle('body-ativo')    
     const enviarDiscussao = document.getElementById('enviarDiscussao')
-    const cancelarDiscussao = document.getElementById('cancelarDiscussao')
-
+    const cancelarDiscussao = document.getElementById('cancelarDiscussao')    
     enviarDiscussao.addEventListener('click', enviar)
     cancelarDiscussao.addEventListener('click', mostraAlertaAddForum)
+
 
     
 }
 
 const addDiscusao = () => {
+    const input = document.getElementById('tituloForum')
+    const textArea = document.getElementById('txtForum')
+    if(input.value != '' && textArea.value != ''){
     mostraAlertaAddForum()
+    }
     
 }
 enviarDiscussao.addEventListener('click', addDiscusao)

@@ -20,7 +20,7 @@
 <body id='body'>
     <header class="cabecalho">
         <div class="cabecalho_div">
-            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" onclick="toggleClassHome()">
+            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="">
         </div>
         <div>
             <img class="cabecalho_img--logo" src="../assets/img/log.png" alt="Logo 'UpdateDonate'">
@@ -37,23 +37,26 @@
                 <li><a class="cabecalho_item"  href="../pages/doacoes.html">Doações</a></li>
             </ul>
         </nav>
-        <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
+        <div class="backgrand" id='home-bg'></div>
     </header>
     <main class="conteudo_principal">
         <h1>Fórum</h1>
-        <button class="forum_btn">Minhas discussões</button>
-        <button class="forum_btn">Minhas respostas</button>
-        <button class="forum_btn">Adicionar tópico</button>
-        <select name="" id="" class="forum_select">
-            <option value="">Todas as categorias</option>
-            <option value="">Software</option>
-            <option value="">Hardware</option>
-            <option value="">Hardware e Software</option>
+        
+        <button class="forum_btn">Minhas Postagens</button>
+
+        <select name="" id="selectForum" class="forum_select">
+            <option value="Todas as categorias">Todas as categorias</option>
+            <option value="Software">Software</option>
+            <option value="Hardware">Hardware</option>
+            <option value="Hardware e Software">Hardware e Software</option>
         </select>
-        <input type="text" placeholder="Pesquise por assunto">
+        <form>
+            <input data-input="search" type="text" placeholder="Pesquise por assunto">
+            <option value=""></option>
+        </form>
 
         <div class="forum_discussoes">
-            <article class="forum_discussao">
+           <!-- <article class="forum_discussao">
                 <a class="forum_card" href="../pages/discussao.html">
                 <div class="forum_conteudo-texto">
                     <div class="forum_texto-parteUm">
@@ -185,9 +188,29 @@
                     <h3 class="forum_usuario">Usuário</h3>
                 </div>
                 </a>
-            </article>
+            </article> -->
         </div>
         
     </main>
+
+    <div class="alerta_backgrand " id="alerta-logout">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto">Você deseja sair da sua conta?</h1>
+            <p class="alerta_texto alerta_texto-segundo"></p>
+
+            <button>Sair</button>
+            <button>Cancelar</button>
+        </div>
+    </div>
+    <div class="alerta_backgrand " id="alerta-cadastre">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto">Você não está logado</h1>
+            <p class="alerta_texto alerta_texto-segundo">Cadastre-se ou faça o login para participar do fórum</p>
+
+            <button id="botaoToCadastro">Cadastre-se</button>
+            <button id="botaoToLogin">Login</button>
+        </div>
+    </div>
 </body>
+<script src="../js/forum.js"></script>
 </html>

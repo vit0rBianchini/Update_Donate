@@ -23,7 +23,7 @@
 <body id='body'>
     <header class="cabecalho">
         <div class="cabecalho_div">
-            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" onclick="toggleClassHome()">
+            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" >
         </div>
         <div>
             <img class="cabecalho_img--logo" src="../assets/img/log.png" alt="Logo 'UpdateDonate'">
@@ -40,11 +40,13 @@
                 <li><a class="cabecalho_item"  href="#">Doações</a></li>
             </ul>
         </nav>
-        <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
+        <div class="backgrand" id='home-bg'></div>
     </header>
     <main class="conteudo_principal">
         <h1>Doações</h1>
-        <input class="doacao_input" type="text" placeholder="Pesquisar componente">
+        <form>
+            <input data-input="pesquisa" class="doacao_input" type="text" placeholder="Pesquisar componente">
+        </form>
         <div class="componentes">
             <!--
             <article class="componente">
@@ -163,12 +165,21 @@
 
         </div>
     </main>
-    <div class="alerta_backgrand " id="alerta" onclick="lookAlert()">
+    <div class="alerta_backgrand " id="alerta-demonstrarInterresse">
         <div class="alerta_conteudo">
             <h3 class="alerta_texto">Para você demonstrar interesse no item, necessita-se que realize o login ou cadastro </h3>
             <button class="alerta_btn">Login</button>
             <button class="alerta_btn">Cadastre-se</button>
         </div>
-    </div>    
+    </div>
+    <div class="alerta_backgrand " id="alerta-logout">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto">Você deseja sair da sua conta?</h1>
+            <p class="alerta_texto alerta_texto-segundo"></p>
+
+            <button>Sair</button>
+            <button>Cancelar</button>
+        </div>
+    </div> 
 </body>
 </html>

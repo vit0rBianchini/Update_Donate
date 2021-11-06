@@ -2,6 +2,7 @@
 @import url(../css/cabecalho.css);
 @import url(../css/conteudo.css);
 @import url(../css/formulario.css);
+@import url(../css/alerta.css);
 
 .conteudo_principal {
     margin-top: 80px;

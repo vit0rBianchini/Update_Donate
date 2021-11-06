@@ -1,9 +1,5 @@
 import { valida } from "./validador.js"
 
-const concluido = (event) => {
-    event.preventDefault()
-    console.log(":)")
-}
 
 const inputs = document.querySelectorAll('input')
 

@@ -32,7 +32,8 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 310px;
+    width: 67vw;
+    max-width: 310px;
 }
 
 .input-invalido input{
@@ -82,4 +83,19 @@ button:hover{
 
 .titulo_login{
     margin: 40px 0 0 0;
+}
+
+
+.dadosIncorretos{
+    display: none;
+    margin-top: 10px;
+    color: red;
+}
+
+.valorLoginInvalido > .dadosIncorretos {
+    display: block;
+}
+
+.alerta_conteudo-perfil > input {
+    min-width: 40vw;
 }

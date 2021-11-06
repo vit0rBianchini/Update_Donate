@@ -19,7 +19,7 @@
 <body id='body'>
     <header class="cabecalho">
         <div class="cabecalho_div">
-            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" onclick="toggleClassHome()">
+            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="">
         </div>
         <div>
             <img class="cabecalho_img--logo" src="../assets/img/log.png" alt="Logo 'UpdateDonate'">
@@ -36,24 +36,34 @@
                 <li><a class="cabecalho_item" href="../pages/doacoes.html">Doações</a></li>
             </ul>
         </nav>
-        <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
+        <div class="backgrand" id='home-bg'></div>
     </header>
     <main class="conteudo_principal">
         <h1>Entre com seu login:</h1>
 
-        <form class="formulario" action="">
-            <label for="usario">Usuário</label>
+        <form class="formulario" action="../pages/perfil.html">
+            <label for="usario">E-mail ou CPF</label>
             <input type="text" id="usario" required>
 
             <label for="senha">Senha</label>
             <input type="password" id="senha" required>
 
+            <span class="dadosIncorretos">E-mail/CPF ou senha inválido</span>
+
+            <button onclick="usuarioValidaLogin()">Entrar</button>
         </form>
-        <button>Entrar</button>
         <h3 class="titulo_login">Já possui uma conta?</h3>
         <button onclick="toCadastro()">Cadastre-se</button>
 
     </main>
+    <div class="alerta_backgrand " id="alerta-logout">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto">Você deseja sair da sua conta?</h1>
+            <p class="alerta_texto alerta_texto-segundo"></p>
 
+            <button>Sair</button>
+            <button>Cancelar</button>
+        </div>
+    </div>
 </body>
 </html>

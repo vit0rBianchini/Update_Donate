@@ -9,7 +9,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <script src="../js/scripts.js"></script>
+
+        <script type="module" src="../js/scripts.js"></script>
         <script src="../js/scriptsSeusInterreses.js"></script>
         
         
@@ -19,7 +20,7 @@
     
     <header class="cabecalho">
         <div class="cabecalho_div">
-            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" onclick="toggleClassHome()">
+            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="">
         </div>
         <div>
             <img class="cabecalho_img--logo" src="../assets/img/log.png" alt="Logo 'UpdateDonate'">
@@ -27,7 +28,7 @@
         <nav class="cabecalho_navegacao" id="cabNav">
             <div class="usuario">
                 <div class="usuario_img"><img class="usuario_img-padrao" src="../assets/img/usuarioPadrao.png" alt=""></div>
-                <a href="#" class="usuario_link-cadastro">Usuário</a>
+                <a href="#" class="usuario_link-cadastro" id="usuario_perfil">Usuário</a>
             </div>
             <ul class="cabecalho_itens">
                 <li><a class="cabecalho_item" href="../index.html">Home</a></li>
@@ -36,7 +37,7 @@
                 <li><a class="cabecalho_item" href="../pages/doacoes.html">Doações</a></li>
             </ul>
         </nav>
-        <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
+        <div class="backgrand" id='home-bg'></div>
     </header>
     
     
@@ -51,9 +52,9 @@
                 <a class="perfil_text">Alterar Usuario</a>
                 <a class="perfil_text">Alterar Senha</a> 
             </div>
-            <label>
+            
                 <button id="torne-seDoador" class="perfil_btn">Torne-se um doador</button>
-            </label>
+            
         </div>
 
         <div id="conteudoDoador1" class="conteudo_desativado">
@@ -63,28 +64,29 @@
             </div>
         </div>
 
-        <div id="conteudoDoador2" class=""> 
-            <h2>Suas Doações</h2>
-            <label>Titulo</label>
-            <input type="text" required id="tituloDoacao">
-            <label>Imagem (link da imgem)</label>
-            <input type="text" required id="imgDoacao">
-            <button data-add >Adicionar doação</button>
-            
+        <div id="conteudoDoador2" class="conteudo_desativado">
+            <div class="entrada_doacoes">
+                <h2>Suas Doações</h2>
+                <label>Titulo</label>
+                <input data-addDoacao type="text" required id="tituloDoacao">
+                <label>Imagem (link da imgem)</label>
+                <input data-addDoacao type="text" required id="imgDoacao">
+                <button data-add >Adicionar doação</button>
+            </div>
             <div class="perfil doações" id="suasDoacoes">
                 
             </div>
         </div>
 
-        <h2>Adicione tópicos ao fórum</h2>
+        <h2 id='addForum'>Adicione tópicos ao fórum</h2>
         <div class="perfil_entrada-forum">
-            <input class="perfil_entrada-discusao-titulo" type="text" placeholder="Titulo" id="tituloForum">
+            <input required class="perfil_entrada-discusao-titulo" type="text" placeholder="Titulo" id="tituloForum">
             <select class="forum_select" id="selectForum">
                 <option value="Hardware e Software">Hardware e Software</option>
                 <option value="Hardware">Hardware</option>
                 <option value="Software">Software</option>
             </select>
-            <textarea class="perfil_entrada-discusao-texto" name="duvida" id="txtForum" cols="30" rows="10"> </textarea>
+            <textarea required class="perfil_entrada-discusao-texto" name="duvida" id="txtForum" cols="30" rows="10"> </textarea>
             <button data-enviarDiscussao>Enviar</button>    
         </div>
         <h2>Suas discussões no fórum</h2>
@@ -112,17 +114,7 @@
             <button data-btncancelar>Cancelar</button>
         </div>
     </div>
-    <div class="alerta_backgrand " id="alerta">
-        <div class="alerta_conteudo" id="alerta_conteudo">
-            
-            <label class="alerta_texto alerta_texto-segundo">Titulo</label>
-            <input data-inptText type="text" required id="tituloEditado">
-            <label class="alerta_texto alerta_texto-segundo">Imagem (link da imgem)</label>
-            <input type="text" required id="imgEditado">
-            <button data-btneditar>Editar</button>
-            <button data-btnCancelarExcluir>Cancelar</button>
-        </div>
-    </div>
+
     <div class="alerta_backgrand " id="alerta-doador">
         
     </div>
@@ -166,9 +158,18 @@
             <button id="cancelarDeletarForum">Cancelar</button>
         </div>
     </div>
+    <div class="alerta_backgrand " id="alerta-logout">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto">Você deseja sair da sua conta?</h1>
+            <p class="alerta_texto alerta_texto-segundo"></p>
+
+            <button>Sair</button>
+            <button>Cancelar</button>
+        </div>
+    </div>
     <script src="../js/scriptsTopico.js"></script>
     <script type="module" src="../js/scriptsSuasDoacoes.js"></script>
-    <script src="../js/scriptsTorneDoador.js"></script>
+
     <script src="../js/scriptsPessoasInterresadas.js"></script>
     
 </body>
