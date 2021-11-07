@@ -135,8 +135,7 @@ const enviar = () => {
     limpaTxt.value = ''
 }
 
-const mostraAlertaAddForum = (event) => {
-    event.preventDefault()
+const mostraAlertaAddForum = () => {
 
     const alerta = document.getElementById('alerta-confirmarEnvioAoForum');
     alerta.classList.toggle('alerta_backgrand-ativo');

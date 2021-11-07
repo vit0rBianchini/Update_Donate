@@ -20,31 +20,54 @@
 .conteudo_apresentacao-principal {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
+   
+    margin-top: 77px;
 }
 
 .update_donate-art {
     width: 100vw;
+    max-width: 400px;
     margin-top: 30px;
 }
 
-.titulo_principal {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
+.titulo_principal , .titulo_secundario, h3, p{
     text-align: center;
-    font-size: 32px;
+}
+
+.titulo_principal {
+    font-weight:600;
+
+    font-size: 27px;
     color: #353554;
     margin-bottom: 20px;
 }
 
 .titulo_secundario {
     padding: 0 4px 0 4px;
-    width: 95vw;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: 22px;
+    width: 92vw;
+    font-weight: 600;
+    
     margin-bottom: 40px;
 }
+p{
+    width: 300px;
+}
+
+p:last-of-type{
+    width:  initial;
+    padding: 0px 5px;
+    background-color: rgba(28,116,186,0.5);
+
+}
+
+.index-button{
+    margin-bottom: 70px;
+}
+
+
 
 
 #itens-bar {
@@ -64,7 +87,7 @@
     justify-content: space-around;
 }
 .footer-icon {
-    margin: 10px 0 30px 0;
+    margin: 10px 0 10px 0;
 
 }
 .footer_img-logo {
@@ -75,8 +98,8 @@
 
 .footer-label {
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 30px;
-    width: 70%;
+    margin: 10px 0;
+    width: 50%;
     text-align: center;
 
 }
@@ -94,6 +117,9 @@
 }
 
 @media screen and (min-width: 768px) {
+    .conteudo_apresentacao-principal {
+        margin-top: 0;
+    }
     .update_donate-art{
         width: 60vw;
     }
@@ -103,38 +129,33 @@
 
     .conteudo_apresentacao-principal {
         width: 70vw;
-        max-width: 1000px;
+        max-width: 1024px;
         flex-direction: row-reverse;
         justify-content: space-between;
+        height: calc(100vh - 77px);
+        margin-top: 0;
     }
 
     .conteudo_apresentacao {
         display: flex;
-        width: 50%;
+        width: 40vw;
+        max-width: 550px;
         flex-direction: column;
     }
 
     
     .update_donate-art {
-        max-width: 430px;
+        max-width: 400px;
     }
 
     .titulo_principal {
-        width: 70%;
-        font-family: 'Noto Sans', sans-serif;
-        font-weight: bold;
-        text-align: center;
-        font-size: 32px;
-        color: #353554;
-        margin-bottom: 20px;
+        width: 100%;
     }
     
     .titulo_secundario {
         padding: 0 4px 0 4px;
-        width: 60%;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        font-size: 22px;
+        width: 70%;
+
         margin-bottom: 40px;
     }
 

@@ -120,7 +120,7 @@ const atualizaCabecalho = () => {
         
     }else{
 
-        usuario_link.innerHTML =  'Cadastra-se'
+        usuario_link.innerHTML =  'Cadastre-se'
         usuario_link.setAttribute('href', '../pages/cadastro.html')
         window.location.href
         cabecalho_item_sair[1].innerHTML = 'Login'
@@ -250,6 +250,17 @@ window.onload = () => {
 
     cabecalho_img.addEventListener('click', toggleClassHome)
     backgrand.addEventListener('click', toggleClassHome)
+
+    const statusUsuarios = JSON.parse(window.localStorage.getItem('usuarios'))
+    const logado = JSON.parse(window.localStorage.getItem('logado'))
+    if(logado[0] == true && window.location.pathname == '/pages/perfil.html'){
+        statusUsuarios.forEach(usuario => {
+            if(usuario[6] == logado[1]){
+                const titlePerfil = document.getElementById('titlePerfil')
+                titlePerfil.innerText ="UpdateDonate | Perfil "+usuario[0]+" "+usuario[1]
+            }
+        })
+    }
     
 
 

@@ -175,6 +175,7 @@
 .card_habilitar-contato-habilitado{
 	background-color: var(--cor-primary);
 	color: aliceblue;
+	border: 1px solid black;
 	width: 30%;
 	max-width: 90px;
 	display: flex;
@@ -282,12 +283,21 @@ button{
 
 		max-width: 300px;
 	}
+
+	.alerta_conteudo-perfil{
+		max-width: min-content;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 	.alerta_conteudo{
 		max-width: 400px;
 	}
+
+	.alerta_conteudo-perfil{
+		max-width: min-content;
+	}
+
 	.perfil_card{
 
 		width: 70vw;

@@ -56,7 +56,7 @@ html, body {
 }
 
 .conteudo_principal {
-    margin-top: 80px;
+    margin-top: 95px;
     
     display: flex;
     flex-direction: column;
@@ -70,8 +70,8 @@ html, body {
     font-size: 22px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     ::-webkit-scrollbar {
-        width: 10px;            /* width of the entire scrollbar */
+        width: 10px;
     }
 }

@@ -30,8 +30,9 @@
     justify-content: center;
     align-items: center;
     background: #161616;
-    width: 290px;
     padding: 30px;
+    width: 70vw;
+	max-width: 270px;
 }
 
 .alerta_texto{
@@ -43,10 +44,6 @@
     
 }
 
-.alerta_conteudo{
-	width: 90vw;
-	max-width: 200px;
-}
 .alerta_conteudo-perfil{
 	max-width: min-content;
 	
@@ -67,4 +64,10 @@
 
 .alerta_conteudo button:last-child{
     margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .alerta_conteudo{
+        max-width: 300px;
+    }
 }

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>UpdateDonate | </title>
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        <title id="titlePerfil"></title>
         <link rel="stylesheet" href="../assets/css/perfil.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,8 +50,8 @@
                 <h2 class="perfil_text perfil_text-usuario">Usuário</h2>
             </div>
             <div class="perfil_conteudo">
-                <a class="perfil_text">Alterar Usuario</a>
-                <a class="perfil_text">Alterar Senha</a> 
+                <a class="perfil_text">Alterar nome</a>
+                <a class="perfil_text">Alterar senha</a> 
             </div>
             
                 <button id="torne-seDoador" class="perfil_btn">Torne-se um doador</button>
@@ -69,7 +70,7 @@
                 <h2>Suas Doações</h2>
                 <label>Titulo</label>
                 <input data-addDoacao type="text" required id="tituloDoacao">
-                <label>Imagem (link da imgem)</label>
+                <label>Imagem (URL)</label>
                 <input data-addDoacao type="text" required id="imgDoacao">
                 <button data-add >Adicionar doação</button>
             </div>
@@ -78,7 +79,7 @@
             </div>
         </div>
 
-        <h2 id='addForum'>Adicione tópicos ao fórum</h2>
+        <h2 id='addForum'>Adicionar postagem ao fórum</h2>
         <div class="perfil_entrada-forum">
             <input required class="perfil_entrada-discusao-titulo" type="text" placeholder="Titulo" id="tituloForum">
             <select class="forum_select" id="selectForum">
@@ -87,13 +88,13 @@
                 <option value="Software">Software</option>
             </select>
             <textarea required class="perfil_entrada-discusao-texto" name="duvida" id="txtForum" cols="30" rows="10"> </textarea>
-            <button data-enviarDiscussao>Enviar</button>    
+            <button id="btnAddPostagem" data-enviarDiscussao>Enviar</button>    
         </div>
-        <h2>Suas discussões no fórum</h2>
+        <h2>Suas postagens no fórum</h2>
         <div id="perfil_discusoes" class="perfil_discusoes">
             
         </div>
-        <h2>Seus interreses</h2>
+        <h2>Suas solicitações</h2>
         <div id="seus_interreses" class="perfil_doacoes">
 
             
@@ -106,9 +107,9 @@
     <div class="alerta_backgrand " id="alerta">
         <div class="alerta_conteudo" id="alerta_conteudo">
             <h1 class="alerta_texto">Editar doação</h1>
-            <label class="alerta_texto alerta_texto-segundo">Titulo</label>
+            <h2 class="alerta_texto alerta_texto-segundo">Titulo</h2>
             <input data-inptText type="text" required id="tituloEditado">
-            <label class="alerta_texto alerta_texto-segundo">Imagem (link da imgem)</label>
+            <h2 class="alerta_texto alerta_texto-segundo">Imagem (URL)</h2>
             <input type="text" required id="imgEditado">
             <button data-btneditar>Editar</button>
             <button data-btncancelar>Cancelar</button>

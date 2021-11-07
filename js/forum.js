@@ -4,7 +4,7 @@ let postModel = [['Vitor','Titulo Titulo Titulo Titulo Titulo Titulo Titulo Titu
 
 postContainer.innerHTML = '' 
 
-console.log(postModel)
+
 for (let i = 0; i < postModel.length; i++) {
 	postContainer.innerHTML += `<article class="forum_discussao" >
 	<a class="forum_card" href="../pages/discussao.html">
@@ -100,7 +100,7 @@ const toLoginbyForum = () => {
 
 const mostraAlerta = () => {
 	if(usuarioEstaLogado[0] == true){
-		window.location.href = '../pages/perfil.html#addForum'
+		window.location.href = '../pages/perfil.html#btnAddPostagem'
 	}else{
 		const alerta = document.getElementById('alerta-cadastre');
     	alerta.classList.toggle('alerta_backgrand-ativo');
@@ -108,7 +108,8 @@ const mostraAlerta = () => {
     	body.classList.toggle('body-ativo')
 		const cadastro = document.getElementById('botaoToCadastro')
 		const login = document.getElementById('botaoToLogin')
-
+		const botaoCancelar = document.getElementById('botaoCancelar')
+		botaoCancelar.addEventListener('click', mostraAlerta)
 		cadastro.addEventListener('click', toCadastrobyForum)
 		login.addEventListener('click', toLoginbyForum)
 	}

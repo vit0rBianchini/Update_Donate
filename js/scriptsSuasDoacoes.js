@@ -161,16 +161,11 @@ const editarComponente = () => {
 
 const alertaAddDoacao = () => {
 
-    const campoEmBranco = false
-    const inputs = document.querySelectorAll('[data-addDoacoes]')
-    inputs.forEach(input => {
-        if(input.value == ''){
-            campoEmBranco = true
-        }
+   
+    const titulo = document.getElementById('tituloDoacao')
+    const img = document.getElementById('imgDoacao')
 
-    })
-    console.log(campoEmBranco)
-    if(campoEmBranco == true){
+    if(titulo.value != '' && img.value != ''){
     
     const alerta = document.getElementById('alerta-doador');
     alerta.classList.toggle('alerta_backgrand-ativo');

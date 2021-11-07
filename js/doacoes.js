@@ -24,7 +24,6 @@ const atualizarPosts = function() {
 		doacoes.push(dados)
 
 	});
-	console.log(doacoes)
 	for (let contr = 0; contr < doacoes.length; contr++){
 		doacoesContainer.innerHTML += `<article class="componente">
 		<div class="componente_conteudo">
@@ -42,15 +41,45 @@ const atualizarPosts = function() {
 		<img class="componente_img" src=${doacoes[contr][1]} alt="">
 		</div>
 		</div>
-		<button class="doacaoes_btn" onclick="addInterrese()">Demonstrar interesse</button>
+		<button class="doacaoes_btn" onclick="addInterrese()">Solicitar doação</button>
 		</article>`
 	}
 }
+
+const forum_btn = document.querySelector('.forum_btn')
+
+
+
 const addInterrese = () => {
 	if(usuarioEstaLogado[0] == true){
-		console.log("mostrar alerta de solicitação enviada")
+		const alerta = document.getElementById('alerta-solicitacaoEnviada');
+    	alerta.classList.toggle('alerta_backgrand-ativo');
+    	const body = document.getElementById('body');
+    	body.classList.toggle('body-ativo')
+		const confirmar = document.getElementById('confirmar')
+		confirmar.addEventListener('click', addInterrese)
+		
+		
+
 	}else{
-		console.log("Mostra alerta de login ou cadastro");
+		const alerta = document.getElementById('alerta-demonstrarInterresse');
+    	alerta.classList.toggle('alerta_backgrand-ativo');
+    	const body = document.getElementById('body');
+    	body.classList.toggle('body-ativo')
+		const cadastro = document.getElementById('botaoToCadastro')
+		const login = document.getElementById('botaoToLogin')
+		const botaoCancelar = document.getElementById('botaoCancelar')
+		botaoCancelar.addEventListener('click', addInterrese)
+
+		cadastro.addEventListener('click', () => {
+			window.location.href = '../pages/cadastro.html'
+			addInterrese()
+		})
+		login.addEventListener('click', () => {
+
+			window.location.href = '../pages/login.html'
+			addInterrese()
+		})
 	}
 }
 

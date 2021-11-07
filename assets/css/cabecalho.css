@@ -127,6 +127,7 @@
 
 .usuario_link-cadastro {
     margin: 5px;
+    margin-top: 2px;
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -134,7 +135,7 @@
 
 @media screen and (min-width: 1024px) {
     .cabecalho {
-        width: calc(100vw - 10px);
+        width: calc(100vw - 15px);
         justify-content: space-around;
         top: 0;
     }
