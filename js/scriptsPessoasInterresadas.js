@@ -1,5 +1,9 @@
 const usuariosInteressados = [["Donatário", "img", "Text Item de interrese", true], ["Donatário2", "img", "Text Item de interrese", false], ["Donatário3", "img", "Text Item de interrese", false]]
 
+const abrirChat = (dados_chamada) => {
+    location.href = 'chat.html'
+}
+
 const aceitarPessoa = (event) => {
     mostrarAlertaSolicitacaoPessoa("aceitar")
     const aceitarSolicitacao = document.getElementById('aceitarSolicitacao')
@@ -146,11 +150,16 @@ const atualizaPessoasInterresadas = () => {
 
             const btnChat = `
             <div class="card_habilitar-contato-habilitado">
-            <div class="habilitado"><a>Chat</a></div>
+            <div class="habilitado abre_chat"><span>Chat</span></div>
             </div>
             `
             div.innerHTML += btnChat
             perfil_interreses.appendChild(div)
+            let chatsAbertos = document.querySelectorAll('.abre_chat');
+            for (let i = 0; i < chatsAbertos.length; i++) {
+                chatsAbertos[i].addEventListener('click', abrirChat);
+            }
+
             
         }else{
 
@@ -166,3 +175,6 @@ const atualizaPessoasInterresadas = () => {
         }
 
 atualizaPessoasInterresadas()
+
+
+
