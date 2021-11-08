@@ -3,7 +3,7 @@ const home = document.getElementById('icon-home');
 const storage = window.localStorage
 
 const toCadastro = () => {
-    window.location.href = '../pages/cadastro.html'
+    window.location.href = 'pages/cadastro.html'
 }
 
 
@@ -82,7 +82,7 @@ const usuarioValidaLogin = () => {
 
 const logout = () => {
     storage.setItem("logado", JSON.stringify([false]))
-    window.location.href = '../../'
+    window.location.href = '/'
 }
 
 const mostraAlertaLogout = () => {
@@ -110,8 +110,16 @@ const atualizaCabecalho = () => {
         dadosDoStorage.forEach((usuario) => {
             
             if(usuario[6] == usuarioLogado[1]){ 
+
                 usuario_link.innerHTML =  usuario[0]
-                usuario_link.setAttribute('href', '../pages/perfil.html')
+                if(window.location.pathname == '/index.html'){
+                    console.log('home')
+                    usuario_link.setAttribute('href', 'pages/perfil.html')
+                    
+                }else{
+                    console.log('perfil')
+                    usuario_link.setAttribute('href', '../pages/perfil.html')
+                }
                 cabecalho_item_sair[1].innerHTML = 'Sair'
                 cabecalho_item_sair[1].setAttribute('href', '#')
                 cabecalho_item_sair[1].addEventListener('click', mostraAlertaLogout)

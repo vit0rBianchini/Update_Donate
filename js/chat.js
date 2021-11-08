@@ -1,3 +1,5 @@
+"use strict"
+
 const chat = document.querySelector('.chat_mensagens')
 const inputChat = document.querySelector('#imp_chat');
 const labelDestinatario = document.querySelector('.chat_usuario-txt');
@@ -5,7 +7,7 @@ const labelDestinatario = document.querySelector('.chat_usuario-txt');
 let conversa;
 let usrId = 245833
 
-labelDestinatario.textContent = 'Zé'
+labelDestinatario.textContent = 'Donatário 1'
 if (!('conversa' in localStorage)) {
 	conversa = []
 	localStorage.setItem('conversa', JSON.stringify(conversa));
@@ -14,12 +16,12 @@ else {
 	conversa = JSON.parse(localStorage.getItem('conversa'));
 }
 
-atualizarChat = (tipo, mensagem = undefined) => {
+const atualizarChat = (tipo, mensagem = undefined) => {
 	if (tipo === 'simples'){
 		chat.innerHTML += `<div class="mensagem chat_campo-mensagem-remetente id="teste">
 		<p class="chat_campo-mensagem-texto">${mensagem.texto}</p></div>`
 		
-	} 
+	}
 	else if (tipo === 'completo') {
 
 		for (let i = 0; i < conversa.length; i++) {
@@ -35,7 +37,7 @@ atualizarChat = (tipo, mensagem = undefined) => {
 	ultima.setAttribute('id', "")
 }
 
-enviarMensagem = () => {
+const enviarMensagem = () => {
 	const mensagem = { 'texto' :  inputChat.value,
 					 'horario' : Date.now(),
 					 'id_usuario' : usrId
