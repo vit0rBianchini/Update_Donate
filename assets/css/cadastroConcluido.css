@@ -1,0 +1,32 @@
+@import url('../css/normalize.css');
+@import url('../css/cabecalho.css');
+@import url('../css/conteudo.css');
+@import url('../css/conteudo.css');
+@import url('../css/formulario.css');
+
+.conteudo_principal{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.conteudo {
+    background-color: #161616;
+    padding: 30px;
+    border-radius: 25px;
+    color: var(--cor-secondary);
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conteudo-titulo {
+    text-align: center;
+}
+
+button{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

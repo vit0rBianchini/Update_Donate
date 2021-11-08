@@ -1,10 +1,13 @@
+@import url(../css/alerta.css);
 .formulario {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 label{
-    margin: 20px 0;
+    margin: 20px 0 10px 0;
+    align-self: flex-start;
 }
 
 input{
@@ -25,15 +28,44 @@ input::placeholder{
     padding-left: 5px;
 }
 
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 67vw;
+    max-width: 310px;
+}
+
+.input-invalido input{
+    border: 1px solid red;
+}
+
+.input-invalido label{
+    color: red;
+}
+
+.input-erro{
+    display: none;
+    align-self: flex-start;
+    margin-top: 5px;
+    margin-left: 10px;
+    filter: drop-shadow(0 0 1rem crimson);
+    color: red;
+}
+
+.input-invalido .input-erro{
+    display: block;
+}
+
 
 button{
     height: 35px;
     background-color: #2b137a;
-    color: var(--cor-fundo);
+    color: var(--cor-secondary);
 
     width: 170px;
     margin-top: 35px;
-    border: none;
+    border: solid 1px black;
     box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.6) ;
     text-transform: uppercase;
     font-weight: bold;
@@ -51,4 +83,19 @@ button:hover{
 
 .titulo_login{
     margin: 40px 0 0 0;
+}
+
+
+.dadosIncorretos{
+    display: none;
+    margin-top: 10px;
+    color: red;
+}
+
+.valorLoginInvalido > .dadosIncorretos {
+    display: block;
+}
+
+.alerta_conteudo-perfil > input {
+    min-width: 40vw;
 }

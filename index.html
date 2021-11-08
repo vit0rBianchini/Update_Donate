@@ -18,7 +18,7 @@
 <body id='body'>
     <header class="cabecalho">
         <div class="cabecalho_div">
-            <img class="cabecalho_img--icon" src="assets/img/icon.png" alt="" onclick="toggleClassHome()">
+            <img class="cabecalho_img--icon" src="assets/img/icon.png" alt="">
         </div>
         <div>
             <img class="cabecalho_img--logo" src="assets/img/log.png" alt="Logo 'UpdateDonate'">
@@ -35,7 +35,7 @@
                 <li><a class="cabecalho_item"  href="pages/doacoes.html">Doações</a></li>
             </ul>
         </nav>
-        <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
+        <div class="backgrand" id='home-bg'></div>
     </header>
     <main class="conteudo_principal">
         
@@ -46,18 +46,22 @@
                 <!-- <a href="pages/login.html">Login</a>
                 <a href="pages/cadastro.html">Cadastro</a>
                 -->
-                <h2 class="titulo_secundario">
+                <h3 class="titulo_secundario">
                     Doe peças que não usa para pessoas que precisam
-                </h2>
-                <button href="#">
-                    SAIBA MAIS!
+                </h3>
+
+                
+
+                <p>
+                    Update Donate é uma rede de conexão entre doadores e donatários fornecendo uma estrutura sólida para doação de peças de informática, componentes e equipamentos eletrônicos usados.
+                </p>
+
+                <p>Cadastre-se e ajude!</p>
+                
+                <button class="index-button" onclick="toCadastro()">
+                    Cadastre-se
                 </button>
             </div>
-        </div>
-
-
-        <div id="itens-bar">
-
         </div>
 
     </main>
@@ -66,19 +70,22 @@
             <img class="footer_img-logo" src="assets/img/log.png" alt="Logo 'UpdateDonate'">
         </div>
 
-        <p class="footer-label">
-            Update Donate é uma rede de conexão entre doadores e donatários de todo o
-            país fornecendo uma estrutura sólida para doação de peças de informática.
-        </p>
-
-        <p class="footer-label">
+        <h4 class="footer-label">
             2021<br>Vozes da Trovoada - Todos os direitos reservados
-        </p>
+        </h4>
         <div class="footer-links">
             <a class="priv-link">Privacidade</a>
             <a class="priv-link">Termos de uso</a>
         </div>
     </footer>
 </body>
+<div class="alerta_backgrand " id="alerta-logout">
+    <div class="alerta_conteudo" id="alerta_conteudo">
+        <h1 class="alerta_texto">Você deseja sair da sua conta?</h1>
+        <p class="alerta_texto alerta_texto-segundo"></p>
 
+        <button>Sair</button>
+        <button>Cancelar</button>
+    </div>
+</div>
 </html>

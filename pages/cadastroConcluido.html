@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UpdateDonate | Página de login</title>
+    <title>UpdateDonate | Cadastro concluido</title>
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
-    <link rel="stylesheet" href="../assets/css/normalize.css">
-    <link rel="stylesheet" href="../assets/css/cabecalho.css">
-    <link rel="stylesheet" href="../assets/css/conteudo.css">
-    <link rel="stylesheet" href="../assets/css/formulario.css">
+    <link rel="stylesheet" href="../assets/css/cadastroConcluido.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -27,11 +24,11 @@
         <nav class="cabecalho_navegacao" id="cabNav">
             <div class="usuario">
                 <div class="usuario_img"><img class="usuario_img-padrao" src="../assets/img/usuarioPadrao.png" alt=""></div>
-                <a onclick="toCadastro()" class="usuario_link-cadastro">Cadastre-se</a>
+                <a href="../pages/cadastro.html" class="usuario_link-cadastro">Cadastre-se</a>
             </div>
             <ul class="cabecalho_itens">
                 <li><a class="cabecalho_item" href="../index.html">Home</a></li>
-                <li class="cabecalho_item--login"><a class="cabecalho_item" href="#">Login</a></li>
+                <li class="cabecalho_item--login"><a class="cabecalho_item" href="../pages/login.html">Login</a></li>
                 <li><a class="cabecalho_item" href="../pages/forum.html">Fórum</a></li>
                 <li><a class="cabecalho_item" href="../pages/doacoes.html">Doações</a></li>
             </ul>
@@ -39,31 +36,11 @@
         <div class="backgrand" id='home-bg'></div>
     </header>
     <main class="conteudo_principal">
-        <h1>Entre com seu login:</h1>
-
-        <form class="formulario" action="../pages/perfil.html">
-            <label for="usario">E-mail</label>
-            <input type="text" id="usario" required>
-
-            <label for="senha">Senha</label>
-            <input type="password" id="senha" required>
-
-            <span class="dadosIncorretos">E-mail ou senha inválido</span>
-
-            <button onclick="usuarioValidaLogin()">Entrar</button>
-        </form>
-        <h3 class="titulo_login">Já possui uma conta?</h3>
-        <button onclick="toCadastro()">Cadastre-se</button>
-
-    </main>
-    <div class="alerta_backgrand " id="alerta-logout">
-        <div class="alerta_conteudo" id="alerta_conteudo">
-            <h1 class="alerta_texto">Você deseja sair da sua conta?</h1>
-            <p class="alerta_texto alerta_texto-segundo"></p>
-
-            <button>Sair</button>
-            <button>Cancelar</button>
+        <div class="conteudo">
+            <h1 class="conteudo-titulo">Cadastro Finalizado com sucesso</h1>
+            <p class="conteudo-text">Agora você pode realizar o login</p>
+            <a href="../pages/login.html"><button>Login</button></a>
+            <a href="../index.html"><button>Página Inicial</button></a>
         </div>
-    </div>
+    </main>
 </body>
-</html>

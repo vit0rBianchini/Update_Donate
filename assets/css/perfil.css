@@ -1,0 +1,384 @@
+@import url(../css/normalize.css);
+@import url(../css/cabecalho.css);
+@import url(../css/conteudo.css);
+@import url(../css/formulario.css);
+@import url(../css/forum.css);
+@import url(../css/doacoes.css);
+@import url(../css/alerta.css);
+
+.conteudo_principal > h2 {
+	text-align: center;
+}
+
+.perfil_card{
+	margin-top: 40px;
+	border-radius: 25px;
+	width: 60vw;
+	max-width: 220px;
+	height: 260px;
+	background-color: #30217E;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: aliceblue;
+	box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.25);
+	border: 1px solid black;
+}
+
+.perfil_conteudo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.perfil_text{
+	cursor: pointer;
+	margin: 0;
+}
+
+.perfil_text-usuario{
+	margin: 20px 0px
+}
+.perfil_img-fundo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70px;
+	height: 70px;
+	background-color: aliceblue;
+	border-radius: 50px;
+
+}
+
+.perfil_img{
+	width: 70%;
+}
+
+.perfil_btn{
+    width: 183px;
+    font-size: 16px;
+    background-color: var(--cor-secondary);
+    color: black;
+    box-shadow: none;
+    border: solid black 1px;
+    margin: 0px;
+	margin-top: 10px;
+    text-transform: none;
+}
+
+.perfil_btn:hover{
+    background-color: #d8dde7;
+}
+
+.perfil_entrada-forum{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.perfil_entrada-discusao-texto{
+	margin-top: 10px;
+	border: 1px solid black;
+	width: 55vw;
+	max-width: 500px;
+	padding: 20px;
+	border-radius: 15px;
+	background-color: var(--cor-secondary);
+}
+
+.forum_discussao{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/* Usuários interessados card */
+
+.card_usuario{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 80vw;
+	max-width: 320px;
+	margin-bottom: 20px;
+	background-color: var(--cor-secondary);
+	border-radius: 25px;
+	border: 1px black solid;
+	box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card_usuario-texto-img{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.card_perfil-fundo{
+	width: 50px;
+	height: 50px;
+	background-color: var(--cor-fundo);
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px 0;
+}
+
+.card_perfil-img{
+
+	width: 70%;
+}
+
+.card_perfil-txt{
+	text-align: center;
+	font-size: 14px;
+}
+
+.card_perfil-txt, .card_perfil-descricaoItem{
+	margin: 20px;
+}
+
+.aceitar, .recusar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	border: 1px solid black;
+	margin: 10px 0;
+	
+}
+
+.aceitar > img, .recusar > img{
+	width: 60%;
+}
+
+
+.aceitar:hover, .recusar:hover{
+	filter: saturate(70%);
+}
+
+.card_habilitar-contato{
+	display: flex;
+	justify-content: center;
+	width: 30%;
+	max-width: 90px;
+}
+
+.card_habilitar-contato-desativo{
+	display: none;
+}
+
+.card_habilitar-contato-habilitado{
+	background-color: var(--cor-primary);
+	color: aliceblue;
+	border: 1px solid black;
+	width: 30%;
+	max-width: 90px;
+	display: flex;
+	justify-content: center;
+	height: 30px;
+	border-radius: 20px;
+	margin: 10px 0;
+}
+
+.card_habilitar-contato-habilitado:hover{
+	cursor: pointer;
+	background-color: #402067;
+}
+
+
+.aceitar{
+	background: rgb(21,107,29);
+	background: linear-gradient(142deg, rgba(21,107,29,1) 0%, rgba(9,121,11,1) 60%, rgba(0,190,255,1) 100%);
+	margin-right: 7px;
+}
+
+.recusar{
+	background: rgb(168,24,24);
+	background: linear-gradient(142deg, rgba(168,24,24,1) 0%, rgba(121,13,9,1) 44%, rgba(255,0,0,1) 100%);
+	
+}
+
+.habilitado{
+	display: flex;
+	align-items: center;
+}
+
+.habilitado > a{
+	font-weight: bold;
+	font-size: 14px;
+}
+
+button{
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.perfil_gerenciar-forum {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: flex;
+	align-self: flex-end;
+}
+/* Doações classe perfil */
+
+.entrada_doacoes{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.perfil_gerenciar-doacao {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: flex;
+	align-self: flex-end;
+}
+
+.doacaoes_btn-desativo{
+	cursor: default;
+	filter: saturate(0%);
+}
+
+.doacaoes_btn-desativo:hover{
+	background-color: var(--cor-primary);
+}
+
+/* Alerta */
+
+.alerta_conteudo{
+	width: 90vw;
+	max-width: 200px;
+}
+.alerta_conteudo-perfil{
+	max-width: min-content;
+	
+}
+.alerta_texto{
+	font-weight: bold;
+}
+
+.alerta_texto-segundo{
+	margin-top: 0px;
+	font-weight: 400;
+}
+
+.alerta_conteudo > input{
+	margin-bottom: 10px;
+}
+
+.input-invalido-erro{
+	display: block;
+}
+
+@media screen and (min-width: 768px){
+	.alerta_conteudo{
+
+		max-width: 300px;
+	}
+
+	.alerta_conteudo-perfil{
+		max-width: min-content;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.alerta_conteudo{
+		max-width: 400px;
+	}
+
+	.alerta_conteudo-perfil{
+		max-width: min-content;
+	}
+
+	.perfil_card{
+
+		width: 70vw;
+		max-width: 498px;
+		height: 150px;
+		display: flex;
+		flex-direction: row;
+
+	}
+	.perfil_conteudo{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	.perfil_text:nth-child(1){
+		margin-bottom: 5px;
+	}
+	
+	.perfil_text-usuario{
+		margin: 20px 0px 0px 0px
+	}
+
+	.perfil_card > label, .perfil_conteudo{
+		margin: 0px 20px;
+	}
+
+	.card_usuario{
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 80vw;
+		max-width: 500px;
+		margin-bottom: 20px;
+		background-color: var(--cor-secondary);
+		border-radius: 25px;
+		border: 1px black solid;
+		box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.25);
+	}
+
+	.card_perfil-fundo{
+		width: 50px;
+		height: 50px;
+		background-color: var(--cor-fundo);
+		border-radius: 30px;
+		margin-right: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.card_usuario-texto-img{
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: center;
+		width: 30vw;
+		max-width: 300px;
+	}
+
+	.card_perfil-conteudo{
+		width: 70%;
+	}
+	.card_perfil-txt{
+		text-align: start;
+	}
+	.card_perfil-txt, .card_perfil-descricaoItem{
+		margin: 10px;
+	}
+
+}
+#conteudoDoador1, #conteudoDoador2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.conteudo_desativado{
+	width: 99vw;
+	height: 0;
+	visibility: hidden;
+}

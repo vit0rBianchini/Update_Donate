@@ -17,11 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script src="../js/scripts.js"></script>
+    <script src="../js/doacoes.js" defer></script>
+
 </head>
 <body id='body'>
     <header class="cabecalho">
         <div class="cabecalho_div">
-            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" onclick="toggleClassHome()">
+            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="" >
         </div>
         <div>
             <img class="cabecalho_img--logo" src="../assets/img/log.png" alt="Logo 'UpdateDonate'">
@@ -29,7 +31,7 @@
         <nav class="cabecalho_navegacao" id="cabNav">
             <div class="usuario">
                 <div class="usuario_img"><img class="usuario_img-padrao" src="../assets/img/usuarioPadrao.png" alt=""></div>
-                <a href="pages/cadastro.html" class="usuario_link-cadastro">Cadastre-se</a>
+                <a href="../pages/cadastro.html" class="usuario_link-cadastro">Cadastre-se</a>
             </div>
             <ul class="cabecalho_itens">
                 <li><a class="cabecalho_item"  href="../index.html">Home</a></li>
@@ -38,12 +40,15 @@
                 <li><a class="cabecalho_item"  href="#">Doações</a></li>
             </ul>
         </nav>
-        <div class="backgrand" onclick="toggleClassHome()" id='home-bg'></div>
+        <div class="backgrand" id='home-bg'></div>
     </header>
     <main class="conteudo_principal">
         <h1>Doações</h1>
-        <input class="doacao_input" type="text" placeholder="Pesquisar componente">
+        <form>
+            <input data-input="pesquisa" class="doacao_input" type="text" placeholder="Pesquisar componente">
+        </form>
         <div class="componentes">
+            <!--
             <article class="componente">
                 <div class="componente_conteudo">
                     <div class="componente_conteudo-usuario">
@@ -156,16 +161,32 @@
                     </div>
                 </div>
                 <button class="doacaoes_btn" onclick="lookAlert()">Demonstrar interesse</button>
-            </article>
+            </article> -->
 
         </div>
     </main>
-    <div class="alerta_backgrand " id="alerta" onclick="lookAlert()">
+    <div class="alerta_backgrand " id="alerta-demonstrarInterresse">
         <div class="alerta_conteudo">
             <h3 class="alerta_texto">Para você demonstrar interesse no item, necessita-se que realize o login ou cadastro </h3>
-            <button class="alerta_btn">Login</button>
-            <button class="alerta_btn">Cadastre-se</button>
+            <button id="botaoToCadastro">Cadastre-se</button>
+            <button id="botaoToLogin">Login</button>
+            <button id="botaoCancelar">Cancelar</button>
         </div>
-    </div>    
+    </div>
+    <div class="alerta_backgrand " id="alerta-logout">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto">Você deseja sair da sua conta?</h1>
+            <p class="alerta_texto alerta_texto-segundo"></p>
+
+            <button>Sair</button>
+            <button>Cancelar</button>
+        </div>
+    </div>
+    <div class="alerta_backgrand " id="alerta-solicitacaoEnviada">
+        <div class="alerta_conteudo">
+            <h3 class="alerta_texto">Solicitação enviada com sucesso, enviamos um e-mail ao doador</h3>
+            <button id="confirmar">Concluido</button>
+        </div>
+    </div>
 </body>
 </html>

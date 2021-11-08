@@ -1,11 +1,17 @@
+.alertas{
+    height: 0px;
+}
+
 .alerta_backgrand{
-    visibility: hidden;
+    display: none;
     z-index: 101;
+    width: 100vw;
+    height: 0;
 }
 
 .alerta_backgrand-ativo{
-    visibility: visible;
-    transition: 0.6s;
+    display: none;
+    
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
@@ -24,20 +30,44 @@
     justify-content: center;
     align-items: center;
     background: #161616;
-    width: 290px;
+    padding: 30px;
+    width: 70vw;
+	max-width: 270px;
 }
 
 .alerta_texto{
-    color: var(--cor-fundo);
+    color: var(--cor-secondary);
     width: 70%;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 30px;
+    font-weight: bold;
+    
 }
 
-.alerta_btn{
-    margin: 5px;
+.alerta_conteudo-perfil{
+	max-width: min-content;
+	
 }
 
-.alerta_btn:last-child{
-    margin-bottom: 70px;
+.alerta_texto-segundo{
+	margin-top: 0px;
+	font-weight: 400;
+}
+
+.alerta_conteudo > input{
+	margin-bottom: 10px;
+}
+
+.alerta_conteudo button{
+    margin: 10px;
+}
+
+.alerta_conteudo button:last-child{
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .alerta_conteudo{
+        max-width: 300px;
+    }
 }

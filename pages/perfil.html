@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        <title id="titlePerfil"></title>
+        <link rel="stylesheet" href="../assets/css/perfil.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <script type="module" src="../js/scripts.js"></script>
+        <script src="../js/scriptsSeusInterreses.js"></script>
+        
+        
+</head>
+<body id='body'>
+    
+    
+    <header class="cabecalho">
+        <div class="cabecalho_div">
+            <img class="cabecalho_img--icon" src="../assets/img/icon.png" alt="">
+        </div>
+        <div>
+            <img class="cabecalho_img--logo" src="../assets/img/log.png" alt="Logo 'UpdateDonate'">
+        </div>
+        <nav class="cabecalho_navegacao" id="cabNav">
+            <div class="usuario">
+                <div class="usuario_img"><img class="usuario_img-padrao" src="../assets/img/usuarioPadrao.png" alt=""></div>
+                <a href="#" class="usuario_link-cadastro" id="usuario_perfil">Usuário</a>
+            </div>
+            <ul class="cabecalho_itens">
+                <li><a class="cabecalho_item" href="../index.html">Home</a></li>
+                <li class="cabecalho_item--login"><a class="cabecalho_item" href="#">Sair</a></li>
+                <li><a class="cabecalho_item" href="../pages/forum.html">Fórum</a></li>
+                <li><a class="cabecalho_item" href="../pages/doacoes.html">Doações</a></li>
+            </ul>
+        </nav>
+        <div class="backgrand" id='home-bg'></div>
+    </header>
+    
+    
+    <main class="conteudo_principal">
+        
+        <div class="perfil_card">
+            <div class="perfil_conteudo">
+                <div class="perfil_img-fundo"><img src="../assets/img/usuarioPadrao.png" alt="" class="perfil_img"></div>
+                <h2 class="perfil_text perfil_text-usuario">Usuário</h2>
+            </div>
+            <div class="perfil_conteudo">
+                <a class="perfil_text">Alterar nome</a>
+                <a class="perfil_text">Alterar senha</a> 
+            </div>
+            
+                <button id="torne-seDoador" class="perfil_btn">Torne-se um doador</button>
+            
+        </div>
+
+        <div id="conteudoDoador1" class="conteudo_desativado">
+            <h2>Pessoas interressadas</h2>
+            <div id="perfil_interreses" class="perfil_interreses"></div>
+
+            </div>
+        </div>
+
+        <div id="conteudoDoador2" class="conteudo_desativado">
+            <div class="entrada_doacoes">
+                <h2>Suas Doações</h2>
+                <label>Titulo</label>
+                <input data-addDoacao type="text" required id="tituloDoacao">
+                <label>Imagem (URL)</label>
+                <input data-addDoacao type="text" required id="imgDoacao">
+                <button data-add >Adicionar doação</button>
+            </div>
+            <div class="perfil doações" id="suasDoacoes">
+                
+            </div>
+        </div>
+
+        <h2 id='addForum'>Adicionar postagem ao fórum</h2>
+        <div class="perfil_entrada-forum">
+            <input required class="perfil_entrada-discusao-titulo" type="text" placeholder="Titulo" id="tituloForum">
+            <select class="forum_select" id="selectForum">
+                <option value="Hardware e Software">Hardware e Software</option>
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+            </select>
+            <textarea required class="perfil_entrada-discusao-texto" name="duvida" id="txtForum" cols="30" rows="10"> </textarea>
+            <button id="btnAddPostagem" data-enviarDiscussao>Enviar</button>    
+        </div>
+        <h2>Suas postagens no fórum</h2>
+        <div id="perfil_discusoes" class="perfil_discusoes">
+            
+        </div>
+        <h2>Suas solicitações</h2>
+        <div id="seus_interreses" class="perfil_doacoes">
+
+            
+        </div>
+        
+        
+        
+        
+    </main>
+    <div class="alerta_backgrand " id="alerta">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto">Editar doação</h1>
+            <h2 class="alerta_texto alerta_texto-segundo">Titulo</h2>
+            <input data-inptText type="text" required id="tituloEditado">
+            <h2 class="alerta_texto alerta_texto-segundo">Imagem (URL)</h2>
+            <input type="text" required id="imgEditado">
+            <button data-btneditar>Editar</button>
+            <button data-btncancelar>Cancelar</button>
+        </div>
+    </div>
+
+    <div class="alerta_backgrand " id="alerta-doador">
+        
+    </div>
+    <div class="alerta_backgrand " id="alerta-excluirDoacao">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto">Você deseja excluir a sua doação?</h1>
+            <h3 class="alerta_texto alerta_texto-segundo">Você não terá mais indicasões de interrese desse produto</h3>
+            <button id="excluirDoacao">Excluir</button>
+            <button id="cancelarExcluir">Cancelar</button>
+        </div>
+    </div>
+    <div class="alerta_backgrand " id="alerta-confirmarEnvioAoForum">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto">Você deseja enviar sua postagem ao fórum?</h1>
+            <h3 class="alerta_texto alerta_texto-segundo">Sua discussão será vista por todos os usários do site</h3>
+            <button id="enviarDiscussao">Enviar</button>
+            <button id="cancelarDiscussao">Cancelar</button>
+        </div>
+    </div>
+    <div class="alerta_backgrand " id="alerta-editarPostForum">
+        <div class="alerta_conteudo alerta_conteudo-perfil" id="alerta_conteudo">
+            <h1 class="alerta_texto">Editar postagem</h1>
+            <input id="inputForumAlert" class="inputAlerta"
+            placeholder="Titulo" />
+            <select class="forum_select" id="selectForumAlert">
+                <option value="Hardware e Software">Hardware e Software</option>
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+            </select>
+            <textarea class="perfil_entrada-discusao-texto" name="alertaTxt" id="alertaTxt" cols="30" rows="10"></textarea>
+            
+            <button id="enviarEdicaoForum">Enviar</button>
+            <button id="cancelarEdicaoForum">Cancelar</button>
+        </div>
+    </div>
+    <div class="alerta_backgrand " id="alerta-deletarPostForum">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto ">Você deseja excluir sua postagem?</h1>
+            <h3 class="alerta_texto alerta_texto-segundo ">Ao clicar em "deletar" você irá perder todas as suas respostas e tópicos da discussão</h3>
+            <button id="deletarPostForum">Deletar</button>
+            <button id="cancelarDeletarForum">Cancelar</button>
+        </div>
+    </div>
+    <div class="alerta_backgrand " id="alerta-logout">
+        <div class="alerta_conteudo" id="alerta_conteudo">
+            <h1 class="alerta_texto">Você deseja sair da sua conta?</h1>
+            <p class="alerta_texto alerta_texto-segundo"></p>
+
+            <button>Sair</button>
+            <button>Cancelar</button>
+        </div>
+    </div>
+    <script src="../js/scriptsTopico.js"></script>
+    <script type="module" src="../js/scriptsSuasDoacoes.js"></script>
+
+    <script src="../js/scriptsPessoasInterresadas.js"></script>
+    
+</body>
+</html>
