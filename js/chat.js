@@ -55,6 +55,23 @@ inputChat.addEventListener('keydown', function(event) {
 }
 )
 
+const btn_enviar = document.getElementById('btn_enviar')
+
+inputChat.addEventListener('keydown', function(event) {
+	if (event.key == "Enter" && inputChat.value.trim().length > 0) {
+		enviarMensagem();
+	}
+}
+)
+
+btn_enviar.addEventListener('click', function() {
+	if (inputChat.value.trim().length > 0) {
+		enviarMensagem();
+	}
+})
+
+
+
 atualizarChat('completo')
 
 
